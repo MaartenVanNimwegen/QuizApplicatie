@@ -1,0 +1,10 @@
+C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\bin\Debug\QuizApplicatie.exe.config
+C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\bin\Debug\QuizApplicatie.exe
+C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\bin\Debug\QuizApplicatie.pdb
+C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\obj\Debug\QuizApplicatie.csproj.AssemblyReference.cache
+C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\obj\Debug\QuizApplicatie.Form1.resources
+C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\obj\Debug\QuizApplicatie.Properties.Resources.resources
+C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\obj\Debug\QuizApplicatie.csproj.GenerateResource.cache
+C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\obj\Debug\QuizApplicatie.csproj.CoreCompileInputs.cache
+C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\obj\Debug\QuizApplicatie.exe
+C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\obj\Debug\QuizApplicatie.pdb
