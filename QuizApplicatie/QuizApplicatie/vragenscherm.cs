@@ -16,5 +16,6 @@ namespace QuizApplicatie
         {
             InitializeComponent();
         }
+
     }
 }
