@@ -8,3 +8,4 @@ C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\
 C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\obj\Debug\QuizApplicatie.csproj.CoreCompileInputs.cache
 C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\obj\Debug\QuizApplicatie.exe
 C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\obj\Debug\QuizApplicatie.pdb
+C:\Users\maart\source\repos\clones\QuizApplicatie\QuizApplicatie\QuizApplicatie\obj\Debug\QuizApplicatie.vragenscherm.resources

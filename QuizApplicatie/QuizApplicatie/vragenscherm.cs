@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace QuizApplicatie
 {
-    public partial class Form1 : Form
+    public partial class vragenscherm : Form
     {
-        public Form1()
+        public vragenscherm()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            vragenscherm myForm = new vragenscherm();
-            myForm.ShowDialog();
         }
     }
 }
