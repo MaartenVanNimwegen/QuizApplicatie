@@ -29,8 +29,18 @@ namespace QuizApplicatie
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.VraagLable = new System.Windows.Forms.Label();
+            this.DataGrid = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nummerArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.naamArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caregorieArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -39,6 +49,7 @@ namespace QuizApplicatie
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(106)))), ((int)(((byte)(176)))));
+            this.panel1.Controls.Add(this.DataGrid);
             this.panel1.Location = new System.Drawing.Point(51, 176);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -61,6 +72,88 @@ namespace QuizApplicatie
             this.VraagLable.Text = "Vragenbeheer";
             this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // DataGrid
+            // 
+            this.DataGrid.AllowUserToAddRows = false;
+            this.DataGrid.AllowUserToDeleteRows = false;
+            this.DataGrid.AllowUserToOrderColumns = true;
+            this.DataGrid.AllowUserToResizeColumns = false;
+            this.DataGrid.AllowUserToResizeRows = false;
+            this.DataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(85)))), ((int)(((byte)(171)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGrid.ColumnHeadersHeight = 40;
+            this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.nummerArtikel,
+            this.naamArtikel,
+            this.caregorieArtikel});
+            this.DataGrid.EnableHeadersVisualStyles = false;
+            this.DataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(73)))), ((int)(((byte)(171)))));
+            this.DataGrid.Location = new System.Drawing.Point(19, 15);
+            this.DataGrid.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.DataGrid.MultiSelect = false;
+            this.DataGrid.Name = "DataGrid";
+            this.DataGrid.ReadOnly = true;
+            this.DataGrid.RowHeadersVisible = false;
+            this.DataGrid.RowHeadersWidth = 51;
+            this.DataGrid.RowTemplate.Height = 30;
+            this.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGrid.ShowCellErrors = false;
+            this.DataGrid.ShowCellToolTips = false;
+            this.DataGrid.ShowEditingIcon = false;
+            this.DataGrid.ShowRowErrors = false;
+            this.DataGrid.Size = new System.Drawing.Size(1763, 702);
+            this.DataGrid.TabIndex = 43;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // nummerArtikel
+            // 
+            this.nummerArtikel.HeaderText = "Vraag";
+            this.nummerArtikel.MinimumWidth = 550;
+            this.nummerArtikel.Name = "nummerArtikel";
+            this.nummerArtikel.ReadOnly = true;
+            this.nummerArtikel.Width = 550;
+            // 
+            // naamArtikel
+            // 
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle2;
+            this.naamArtikel.HeaderText = "Goed Antwoord";
+            this.naamArtikel.MinimumWidth = 550;
+            this.naamArtikel.Name = "naamArtikel";
+            this.naamArtikel.ReadOnly = true;
+            this.naamArtikel.Width = 550;
+            // 
+            // caregorieArtikel
+            // 
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle3;
+            this.caregorieArtikel.HeaderText = "Fout Antwoord";
+            this.caregorieArtikel.MinimumWidth = 550;
+            this.caregorieArtikel.Name = "caregorieArtikel";
+            this.caregorieArtikel.ReadOnly = true;
+            this.caregorieArtikel.Width = 550;
+            // 
             // VragenBeheer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -72,6 +165,8 @@ namespace QuizApplicatie
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VragenBeheer";
             this.Text = "VragenBeheer";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -80,5 +175,10 @@ namespace QuizApplicatie
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label VraagLable;
+        private System.Windows.Forms.DataGridView DataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nummerArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn naamArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caregorieArtikel;
     }
 }
