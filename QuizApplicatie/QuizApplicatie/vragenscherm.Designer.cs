@@ -44,22 +44,25 @@ namespace QuizApplicatie
             this.VraagLable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.VraagLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VraagLable.ForeColor = System.Drawing.SystemColors.Control;
-            this.VraagLable.Location = new System.Drawing.Point(76, 34);
+            this.VraagLable.Location = new System.Drawing.Point(104, 51);
+            this.VraagLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.VraagLable.Name = "VraagLable";
             this.VraagLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.VraagLable.Size = new System.Drawing.Size(1159, 146);
+            this.VraagLable.Size = new System.Drawing.Size(1593, 218);
             this.VraagLable.TabIndex = 0;
             this.VraagLable.Text = "Hier komt de vraag";
             this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(945, 224);
+            this.panel1.Location = new System.Drawing.Point(1299, 336);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(290, 432);
+            this.panel1.Size = new System.Drawing.Size(399, 648);
             this.panel1.TabIndex = 4;
             // 
             // label2
@@ -67,30 +70,35 @@ namespace QuizApplicatie
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(159, 50);
+            this.label2.Location = new System.Drawing.Point(219, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 44);
+            this.label2.Size = new System.Drawing.Size(165, 59);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tijd: 0";
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.panel2.Location = new System.Drawing.Point(76, 224);
+            this.panel2.Location = new System.Drawing.Point(104, 336);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(823, 432);
+            this.panel2.Size = new System.Drawing.Size(1132, 648);
             this.panel2.TabIndex = 5;
             // 
             // vragenscherm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
-            this.ClientSize = new System.Drawing.Size(1303, 701);
+            this.ClientSize = new System.Drawing.Size(1792, 1052);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.VraagLable);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "vragenscherm";
             this.Text = "vragenscherm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

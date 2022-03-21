@@ -22,5 +22,25 @@ namespace QuizApplicatie
             vragenscherm myForm = new vragenscherm();
             myForm.ShowDialog();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CustomQuizBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VragenbeheerBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ScoresBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

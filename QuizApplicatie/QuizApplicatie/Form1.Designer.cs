@@ -52,15 +52,75 @@ namespace QuizApplicatie
             QuickplayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             QuickplayBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             QuickplayBtn.ForeColor = System.Drawing.Color.White;
-            QuickplayBtn.Location = new System.Drawing.Point(102, 15);
-            QuickplayBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            QuickplayBtn.Location = new System.Drawing.Point(78, 41);
+            QuickplayBtn.Margin = new System.Windows.Forms.Padding(4);
             QuickplayBtn.Name = "QuickplayBtn";
-            QuickplayBtn.Size = new System.Drawing.Size(888, 189);
+            QuickplayBtn.Size = new System.Drawing.Size(888, 255);
             QuickplayBtn.TabIndex = 0;
             QuickplayBtn.TabStop = false;
             QuickplayBtn.Text = "Quickplay";
             QuickplayBtn.UseVisualStyleBackColor = false;
             QuickplayBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // CustomQuizBtn
+            // 
+            CustomQuizBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            CustomQuizBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            CustomQuizBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            CustomQuizBtn.FlatAppearance.BorderSize = 0;
+            CustomQuizBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            CustomQuizBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            CustomQuizBtn.ForeColor = System.Drawing.Color.White;
+            CustomQuizBtn.Location = new System.Drawing.Point(78, 317);
+            CustomQuizBtn.Margin = new System.Windows.Forms.Padding(4);
+            CustomQuizBtn.Name = "CustomQuizBtn";
+            CustomQuizBtn.Size = new System.Drawing.Size(888, 255);
+            CustomQuizBtn.TabIndex = 2;
+            CustomQuizBtn.TabStop = false;
+            CustomQuizBtn.Text = "Custom quiz";
+            CustomQuizBtn.UseVisualStyleBackColor = false;
+            CustomQuizBtn.Click += new System.EventHandler(this.CustomQuizBtn_Click);
+            // 
+            // VragenbeheerBtn
+            // 
+            VragenbeheerBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            VragenbeheerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            VragenbeheerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            VragenbeheerBtn.FlatAppearance.BorderSize = 0;
+            VragenbeheerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            VragenbeheerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            VragenbeheerBtn.ForeColor = System.Drawing.Color.White;
+            VragenbeheerBtn.Location = new System.Drawing.Point(78, 593);
+            VragenbeheerBtn.Margin = new System.Windows.Forms.Padding(4);
+            VragenbeheerBtn.Name = "VragenbeheerBtn";
+            VragenbeheerBtn.Size = new System.Drawing.Size(888, 255);
+            VragenbeheerBtn.TabIndex = 3;
+            VragenbeheerBtn.TabStop = false;
+            VragenbeheerBtn.Text = "Vragenbeheer";
+            VragenbeheerBtn.UseVisualStyleBackColor = false;
+            VragenbeheerBtn.Click += new System.EventHandler(this.VragenbeheerBtn_Click);
+            // 
+            // ScoresBtn
+            // 
+            ScoresBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            ScoresBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            ScoresBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            ScoresBtn.FlatAppearance.BorderSize = 0;
+            ScoresBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            ScoresBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ScoresBtn.ForeColor = System.Drawing.Color.White;
+            ScoresBtn.Location = new System.Drawing.Point(78, 867);
+            ScoresBtn.Margin = new System.Windows.Forms.Padding(4);
+            ScoresBtn.Name = "ScoresBtn";
+            ScoresBtn.Size = new System.Drawing.Size(888, 255);
+            ScoresBtn.TabIndex = 4;
+            ScoresBtn.TabStop = false;
+            ScoresBtn.Text = "Scores";
+            ScoresBtn.UseVisualStyleBackColor = false;
+            ScoresBtn.Click += new System.EventHandler(this.ScoresBtn_Click);
             // 
             // Title
             // 
@@ -76,74 +136,21 @@ namespace QuizApplicatie
             this.Title.Text = "Quiz applicatie";
             this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // CustomQuizBtn
-            // 
-            CustomQuizBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            CustomQuizBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            CustomQuizBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            CustomQuizBtn.FlatAppearance.BorderSize = 0;
-            CustomQuizBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            CustomQuizBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            CustomQuizBtn.ForeColor = System.Drawing.Color.White;
-            CustomQuizBtn.Location = new System.Drawing.Point(102, 217);
-            CustomQuizBtn.Margin = new System.Windows.Forms.Padding(4);
-            CustomQuizBtn.Name = "CustomQuizBtn";
-            CustomQuizBtn.Size = new System.Drawing.Size(888, 189);
-            CustomQuizBtn.TabIndex = 2;
-            CustomQuizBtn.TabStop = false;
-            CustomQuizBtn.Text = "Custom quiz";
-            CustomQuizBtn.UseVisualStyleBackColor = false;
-            // 
-            // VragenbeheerBtn
-            // 
-            VragenbeheerBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            VragenbeheerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            VragenbeheerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            VragenbeheerBtn.FlatAppearance.BorderSize = 0;
-            VragenbeheerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            VragenbeheerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            VragenbeheerBtn.ForeColor = System.Drawing.Color.White;
-            VragenbeheerBtn.Location = new System.Drawing.Point(102, 419);
-            VragenbeheerBtn.Margin = new System.Windows.Forms.Padding(4);
-            VragenbeheerBtn.Name = "VragenbeheerBtn";
-            VragenbeheerBtn.Size = new System.Drawing.Size(888, 189);
-            VragenbeheerBtn.TabIndex = 3;
-            VragenbeheerBtn.TabStop = false;
-            VragenbeheerBtn.Text = "Vragenbeheer";
-            VragenbeheerBtn.UseVisualStyleBackColor = false;
-            // 
-            // ScoresBtn
-            // 
-            ScoresBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            ScoresBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            ScoresBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            ScoresBtn.FlatAppearance.BorderSize = 0;
-            ScoresBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            ScoresBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ScoresBtn.ForeColor = System.Drawing.Color.White;
-            ScoresBtn.Location = new System.Drawing.Point(102, 621);
-            ScoresBtn.Margin = new System.Windows.Forms.Padding(4);
-            ScoresBtn.Name = "ScoresBtn";
-            ScoresBtn.Size = new System.Drawing.Size(888, 189);
-            ScoresBtn.TabIndex = 4;
-            ScoresBtn.TabStop = false;
-            ScoresBtn.Text = "Scores";
-            ScoresBtn.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(106)))), ((int)(((byte)(176)))));
             this.panel1.Controls.Add(QuickplayBtn);
             this.panel1.Controls.Add(ScoresBtn);
             this.panel1.Controls.Add(CustomQuizBtn);
             this.panel1.Controls.Add(VragenbeheerBtn);
-            this.panel1.Location = new System.Drawing.Point(72, 192);
+            this.panel1.Location = new System.Drawing.Point(37, 201);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1056, 831);
+            this.panel1.Size = new System.Drawing.Size(1056, 1157);
             this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Form1
             // 
@@ -153,7 +160,7 @@ namespace QuizApplicatie
             this.ClientSize = new System.Drawing.Size(1152, 1404);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Title);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
