@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuizApplicatie
 {
-    public partial class vragenscherm : Form
+    public partial class VragenScherm : Form
     {
-        public vragenscherm()
+        public VragenScherm()
         {
             InitializeComponent();
         }

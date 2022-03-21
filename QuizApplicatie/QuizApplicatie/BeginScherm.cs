@@ -19,7 +19,7 @@ namespace QuizApplicatie
 
         private void button1_Click(object sender, EventArgs e)
         {
-            vragenscherm myForm = new vragenscherm();
+            VragenScherm myForm = new VragenScherm();
             myForm.ShowDialog();
         }
 
@@ -35,7 +35,8 @@ namespace QuizApplicatie
 
         private void VragenbeheerBtn_Click(object sender, EventArgs e)
         {
-
+            VragenBeheer myForm = new VragenBeheer();
+            myForm.ShowDialog();
         }
 
         private void ScoresBtn_Click(object sender, EventArgs e)

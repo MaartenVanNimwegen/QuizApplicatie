@@ -1,7 +1,7 @@
 ﻿
 namespace QuizApplicatie
 {
-    partial class vragenscherm
+    partial class VragenScherm
     {
         /// <summary>
         /// Required designer variable.
