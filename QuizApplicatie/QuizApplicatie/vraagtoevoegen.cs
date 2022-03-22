@@ -13,11 +13,9 @@ namespace QuizApplicatie
 {
     public partial class vraagtoevoegen : Form
     {
-        private string naam = "";
-        private string beschrijving = "";
-        private string categorie = "";
-        private string img = "";
-        private string Artikelnummer = "";
+        private string Vraag = "";
+        private string GoedAntwoord = "";
+        private string FoutAntwoord = "";
 
         public vraagtoevoegen()
         {
@@ -25,27 +23,28 @@ namespace QuizApplicatie
         }
         private void PlusjeBtn_Click(object sender, EventArgs e)
         {
-            naam = titleTextbox.Text;
-            beschrijving = beschrijvingTextbox.Text;
-            categorie = CategorieTextbox.Text;
-            img = ImgurlTextbox.Text;
-            Artikelnummer = ArtikelnummerInput.Text;
-
-            if (titleTextbox.Text.Length <= 0 && beschrijvingTextbox.Text.Length <= 0 && CategorieTextbox.Text.Length <= 0 && ArtikelnummerInput.Text.Length <= 0)
+            Vraag = VraagTextbox.Text;
+            GoedAntwoord = GoedAntwoordTextbox.Text;
+            FoutAntwoord = FoutAntwoordTextbox.Text;
+        
+            if (VraagTextbox.Text.Length <= 0 || GoedAntwoordTextbox.Text.Length <= 0 || FoutAntwoordTextbox.Text.Length <= 0)
             {
                 MessageBox.Show("Niet alle velden zijn ingevuld!");
             }
-            else if (titleTextbox.Text.Length > 50 || beschrijvingTextbox.Text.Length > 50 || CategorieTextbox.Text.Length > 50 || ArtikelnummerInput.Text.Length > 50)
+            else if (VraagTextbox.Text.Length > 50 || GoedAntwoordTextbox.Text.Length > 50 || FoutAntwoordTextbox.Text.Length > 50)
             {
                 MessageBox.Show("Het maximale aantal karakters te gebruiken in één of meer van de velden is 50!");
             }
             else
             {
-                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
+                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ");
                 connection.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO `artikelen` (`Artikelnummer`, `naam`, `categorie`, `inleverdatum`, `beschrijving`, `toevoeger`, `toegevoegdOp`, `img`) VALUES ( '" + Artikelnummer + "', '" + naam + "', '" + categorie + "', now(), '" + beschrijving + "', '" + Login.naam + "', now(),'" + img + "');", connection);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO `vragen` (`Vraag`, `GoedAntwoord`, `FoutAntwoord`) VALUES ( '" + Vraag + "', '" + GoedAntwoord + "', '" + FoutAntwoord + "');", connection);
                 cmd.ExecuteReader();
-                MessageBox.Show("Artikel toegevoegd");
+                MessageBox.Show("Vraag toegevoegd");
+                VraagTextbox.Text = "";
+                GoedAntwoordTextbox.Text = "";
+                FoutAntwoordTextbox.Text = "";
             }
         }
     }

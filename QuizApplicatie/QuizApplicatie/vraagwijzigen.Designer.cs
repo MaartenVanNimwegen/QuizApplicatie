@@ -131,6 +131,7 @@ namespace QuizApplicatie
             this.WijzigenBtn.Size = new System.Drawing.Size(86, 83);
             this.WijzigenBtn.TabIndex = 54;
             this.WijzigenBtn.TabStop = false;
+            this.WijzigenBtn.Click += new System.EventHandler(this.WijzigenBtn_Click);
             // 
             // vraagwijzigen
             // 
