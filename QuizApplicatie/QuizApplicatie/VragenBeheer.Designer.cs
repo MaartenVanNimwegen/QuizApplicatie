@@ -30,11 +30,13 @@ namespace QuizApplicatie
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VragenBeheer));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DataGrid = new System.Windows.Forms.DataGridView();
+            this.VragenGrid = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nummerArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naamArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +44,7 @@ namespace QuizApplicatie
             this.VraagLable = new System.Windows.Forms.Label();
             this.BackBtn = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VragenGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,26 +54,26 @@ namespace QuizApplicatie
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(106)))), ((int)(((byte)(176)))));
-            this.panel1.Controls.Add(this.DataGrid);
-            this.panel1.Location = new System.Drawing.Point(41, 325);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Controls.Add(this.VragenGrid);
+            this.panel1.Location = new System.Drawing.Point(22, 176);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1844, 715);
+            this.panel1.Size = new System.Drawing.Size(1879, 882);
             this.panel1.TabIndex = 9;
             // 
-            // DataGrid
+            // VragenGrid
             // 
-            this.DataGrid.AllowUserToAddRows = false;
-            this.DataGrid.AllowUserToDeleteRows = false;
-            this.DataGrid.AllowUserToOrderColumns = true;
-            this.DataGrid.AllowUserToResizeColumns = false;
-            this.DataGrid.AllowUserToResizeRows = false;
-            this.DataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.VragenGrid.AllowUserToAddRows = false;
+            this.VragenGrid.AllowUserToDeleteRows = false;
+            this.VragenGrid.AllowUserToOrderColumns = true;
+            this.VragenGrid.AllowUserToResizeColumns = false;
+            this.VragenGrid.AllowUserToResizeRows = false;
+            this.VragenGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.VragenGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.VragenGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.VragenGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(85)))), ((int)(((byte)(171)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -79,30 +81,51 @@ namespace QuizApplicatie
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGrid.ColumnHeadersHeight = 40;
-            this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.VragenGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.VragenGrid.ColumnHeadersHeight = 40;
+            this.VragenGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nummerArtikel,
             this.naamArtikel,
             this.caregorieArtikel});
-            this.DataGrid.EnableHeadersVisualStyles = false;
-            this.DataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(73)))), ((int)(((byte)(171)))));
-            this.DataGrid.Location = new System.Drawing.Point(35, 28);
-            this.DataGrid.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.DataGrid.MultiSelect = false;
-            this.DataGrid.Name = "DataGrid";
-            this.DataGrid.ReadOnly = true;
-            this.DataGrid.RowHeadersVisible = false;
-            this.DataGrid.RowHeadersWidth = 51;
-            this.DataGrid.RowTemplate.Height = 30;
-            this.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGrid.ShowCellErrors = false;
-            this.DataGrid.ShowCellToolTips = false;
-            this.DataGrid.ShowEditingIcon = false;
-            this.DataGrid.ShowRowErrors = false;
-            this.DataGrid.Size = new System.Drawing.Size(1770, 649);
-            this.DataGrid.TabIndex = 43;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.VragenGrid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.VragenGrid.EnableHeadersVisualStyles = false;
+            this.VragenGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.VragenGrid.Location = new System.Drawing.Point(19, 15);
+            this.VragenGrid.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.VragenGrid.MultiSelect = false;
+            this.VragenGrid.Name = "VragenGrid";
+            this.VragenGrid.ReadOnly = true;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.VragenGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.VragenGrid.RowHeadersVisible = false;
+            this.VragenGrid.RowHeadersWidth = 51;
+            this.VragenGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
+            this.VragenGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.VragenGrid.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
+            this.VragenGrid.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.VragenGrid.RowTemplate.Height = 30;
+            this.VragenGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.VragenGrid.ShowCellErrors = false;
+            this.VragenGrid.ShowCellToolTips = false;
+            this.VragenGrid.ShowEditingIcon = false;
+            this.VragenGrid.ShowRowErrors = false;
+            this.VragenGrid.Size = new System.Drawing.Size(1838, 847);
+            this.VragenGrid.TabIndex = 43;
+            this.VragenGrid.DoubleClick += new System.EventHandler(this.VragenGrid_DoubleClick);
             // 
             // id
             // 
@@ -148,11 +171,11 @@ namespace QuizApplicatie
             this.VraagLable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
             this.VraagLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VraagLable.ForeColor = System.Drawing.SystemColors.Control;
-            this.VraagLable.Location = new System.Drawing.Point(41, 50);
-            this.VraagLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.VraagLable.Location = new System.Drawing.Point(22, 27);
+            this.VraagLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.VraagLable.Name = "VraagLable";
             this.VraagLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.VraagLable.Size = new System.Drawing.Size(1844, 220);
+            this.VraagLable.Size = new System.Drawing.Size(1879, 119);
             this.VraagLable.TabIndex = 8;
             this.VraagLable.Text = "Vragenbeheer";
             this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,32 +186,31 @@ namespace QuizApplicatie
             this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
             this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BackBtn.Location = new System.Drawing.Point(51, 62);
-            this.BackBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.BackBtn.Location = new System.Drawing.Point(28, 34);
+            this.BackBtn.Margin = new System.Windows.Forms.Padding(1);
             this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(75, 81);
+            this.BackBtn.Size = new System.Drawing.Size(41, 44);
             this.BackBtn.TabIndex = 44;
             this.BackBtn.TabStop = false;
             // 
             // VragenBeheer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ControlBox = false;
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.VraagLable);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VragenBeheer";
             this.Text = "VragenBeheer";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VragenGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).EndInit();
             this.ResumeLayout(false);
 
@@ -198,7 +220,7 @@ namespace QuizApplicatie
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label VraagLable;
-        private System.Windows.Forms.DataGridView DataGrid;
+        private System.Windows.Forms.DataGridView VragenGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nummerArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn naamArtikel;

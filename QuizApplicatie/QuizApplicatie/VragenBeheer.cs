@@ -15,6 +15,15 @@ namespace QuizApplicatie
         public VragenBeheer()
         {
             InitializeComponent();
+
+
+            VragenGrid.Rows.Add("A", "B", "C", "D");
+            VragenGrid.Rows.Add("A", "B", "C", "D");
+        }
+
+        private void VragenGrid_DoubleClick(object sender, EventArgs e)
+        {
+
         }
     }
 }
