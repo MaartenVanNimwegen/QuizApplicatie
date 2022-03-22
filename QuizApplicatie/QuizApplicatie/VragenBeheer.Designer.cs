@@ -43,15 +43,9 @@ namespace QuizApplicatie
             this.nummerArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naamArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caregorieArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EditBtn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.DeleteBtn = new System.Windows.Forms.DataGridViewImageColumn();
             this.VraagLable = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.BackBtn = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VragenGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,8 +54,6 @@ namespace QuizApplicatie
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(106)))), ((int)(((byte)(176)))));
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.VragenGrid);
             this.panel1.Location = new System.Drawing.Point(40, 325);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -95,9 +87,7 @@ namespace QuizApplicatie
             this.id,
             this.nummerArtikel,
             this.naamArtikel,
-            this.caregorieArtikel,
-            this.EditBtn,
-            this.DeleteBtn});
+            this.caregorieArtikel});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -153,20 +143,6 @@ namespace QuizApplicatie
             this.VraagLable.Text = "Vragenbeheer";
             this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // BackBtn
-            // 
-            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
-            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BackBtn.Location = new System.Drawing.Point(59, 113);
-            this.BackBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(75, 81);
-            this.BackBtn.TabIndex = 44;
-            this.BackBtn.TabStop = false;
-            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
-            // 
             // id
             // 
             this.id.HeaderText = "id";
@@ -219,20 +195,7 @@ namespace QuizApplicatie
             this.VraagLable.TabIndex = 8;
             this.VraagLable.Text = "Vragenbeheer";
             this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // BackBtn
-            // 
-            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
-            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BackBtn.Location = new System.Drawing.Point(32, 61);
-            this.BackBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(41, 44);
-            this.BackBtn.TabIndex = 44;
-            this.BackBtn.TabStop = false;
-            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            
             // 
             // VragenBeheer
             // 
@@ -241,7 +204,6 @@ namespace QuizApplicatie
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(2288, 1923);
             this.ControlBox = false;
-            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.VraagLable);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -253,7 +215,6 @@ namespace QuizApplicatie
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VragenGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,6 +229,5 @@ namespace QuizApplicatie
         private System.Windows.Forms.DataGridViewTextBoxColumn nummerArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn naamArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn caregorieArtikel;
-        private System.Windows.Forms.PictureBox BackBtn;
     }
 }
