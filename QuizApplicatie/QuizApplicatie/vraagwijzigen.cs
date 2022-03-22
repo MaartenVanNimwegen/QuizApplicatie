@@ -22,10 +22,10 @@ namespace QuizApplicatie
         private string GoedAntwoord = "";
         private string FoutAntwoord = "";
 
-        public vraagwijzigen(string rowId)
+        public vraagwijzigen()
         {
             InitializeComponent();
-            id = rowId; 
+            //id = rowId; 
 
             MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizappliatie; User ID = root; Password = ");
             connection.Open();

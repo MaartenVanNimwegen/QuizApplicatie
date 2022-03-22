@@ -129,7 +129,7 @@ namespace QuizApplicatie
             this.VragenGrid.ShowRowErrors = false;
             this.VragenGrid.Size = new System.Drawing.Size(1838, 767);
             this.VragenGrid.TabIndex = 43;
-            this.VragenGrid.DoubleClick += new System.EventHandler(this.VragenGrid_DoubleClick);
+            this.VragenGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VragenGrid_CellDoubleClick);
             // 
             // id
             // 
