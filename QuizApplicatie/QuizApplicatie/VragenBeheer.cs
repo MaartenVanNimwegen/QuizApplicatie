@@ -30,5 +30,17 @@ namespace QuizApplicatie
         {
             Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            vraagtoevoegen myForm = new vraagtoevoegen();
+            myForm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            vraagwijzigen myForm = new vraagwijzigen();
+            myForm.ShowDialog();
+        }
     }
 }

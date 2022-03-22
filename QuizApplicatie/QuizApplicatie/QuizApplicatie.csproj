@@ -60,6 +60,18 @@
     <Compile Include="scores.Designer.cs">
       <DependentUpon>scores.cs</DependentUpon>
     </Compile>
+    <Compile Include="vraagtoevoegen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vraagtoevoegen.Designer.cs">
+      <DependentUpon>vraagtoevoegen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vraagwijzigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vraagwijzigen.Designer.cs">
+      <DependentUpon>vraagwijzigen.cs</DependentUpon>
+    </Compile>
     <Compile Include="VragenBeheer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,9 +95,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="scores.resx">
       <DependentUpon>scores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vraagtoevoegen.resx">
+      <DependentUpon>vraagtoevoegen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vraagwijzigen.resx">
+      <DependentUpon>vraagwijzigen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VragenBeheer.resx">
       <DependentUpon>VragenBeheer.cs</DependentUpon>
@@ -105,6 +124,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\plusje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
