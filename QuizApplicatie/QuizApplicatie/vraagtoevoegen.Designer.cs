@@ -31,14 +31,14 @@ namespace QuizApplicatie
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vraagtoevoegen));
             this.vraagToevoegenLable = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.BackBtn = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
+            this.VraagTextbox = new System.Windows.Forms.TextBox();
+            this.VraagLabel = new System.Windows.Forms.Label();
+            this.FoutAntwoordLabel = new System.Windows.Forms.Label();
+            this.FoutAntwoordTextbox = new System.Windows.Forms.TextBox();
+            this.GoedAntwoordLabel = new System.Windows.Forms.Label();
+            this.GoedAntwoordTextbox = new System.Windows.Forms.TextBox();
+            this.PlusjeBtn = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PlusjeBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // vraagToevoegenLable
@@ -55,82 +55,83 @@ namespace QuizApplicatie
             this.vraagToevoegenLable.Text = "Vraag toevoegen";
             this.vraagToevoegenLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // VraagTextbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(383, 20);
-            this.textBox3.TabIndex = 3;
+            this.VraagTextbox.Location = new System.Drawing.Point(12, 106);
+            this.VraagTextbox.Name = "VraagTextbox";
+            this.VraagTextbox.Size = new System.Drawing.Size(383, 20);
+            this.VraagTextbox.TabIndex = 3;
             // 
-            // label1
+            // VraagLabel
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.VraagLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(8, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Vraag:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.VraagLabel.AutoSize = true;
+            this.VraagLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.VraagLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.VraagLabel.Location = new System.Drawing.Point(8, 83);
+            this.VraagLabel.Name = "VraagLabel";
+            this.VraagLabel.Size = new System.Drawing.Size(58, 20);
+            this.VraagLabel.TabIndex = 4;
+            this.VraagLabel.Text = "Vraag:";
+            this.VraagLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // FoutAntwoordLabel
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.FoutAntwoordLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(8, 193);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Fout antwoord:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FoutAntwoordLabel.AutoSize = true;
+            this.FoutAntwoordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.FoutAntwoordLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.FoutAntwoordLabel.Location = new System.Drawing.Point(8, 193);
+            this.FoutAntwoordLabel.Name = "FoutAntwoordLabel";
+            this.FoutAntwoordLabel.Size = new System.Drawing.Size(120, 20);
+            this.FoutAntwoordLabel.TabIndex = 6;
+            this.FoutAntwoordLabel.Text = "Fout antwoord:";
+            this.FoutAntwoordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // FoutAntwoordTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 216);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(383, 20);
-            this.textBox1.TabIndex = 5;
+            this.FoutAntwoordTextbox.Location = new System.Drawing.Point(12, 216);
+            this.FoutAntwoordTextbox.Name = "FoutAntwoordTextbox";
+            this.FoutAntwoordTextbox.Size = new System.Drawing.Size(383, 20);
+            this.FoutAntwoordTextbox.TabIndex = 5;
             // 
-            // label3
+            // GoedAntwoordLabel
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.GoedAntwoordLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(8, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Goed antwoord:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GoedAntwoordLabel.AutoSize = true;
+            this.GoedAntwoordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.GoedAntwoordLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.GoedAntwoordLabel.Location = new System.Drawing.Point(8, 138);
+            this.GoedAntwoordLabel.Name = "GoedAntwoordLabel";
+            this.GoedAntwoordLabel.Size = new System.Drawing.Size(127, 20);
+            this.GoedAntwoordLabel.TabIndex = 8;
+            this.GoedAntwoordLabel.Text = "Goed antwoord:";
+            this.GoedAntwoordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // GoedAntwoordTextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 161);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(383, 20);
-            this.textBox2.TabIndex = 7;
+            this.GoedAntwoordTextbox.Location = new System.Drawing.Point(12, 161);
+            this.GoedAntwoordTextbox.Name = "GoedAntwoordTextbox";
+            this.GoedAntwoordTextbox.Size = new System.Drawing.Size(383, 20);
+            this.GoedAntwoordTextbox.TabIndex = 7;
             // 
-            // BackBtn
+            // PlusjeBtn
             // 
-            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
-            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
-            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BackBtn.Image = global::QuizApplicatie.Properties.Resources.plusje;
-            this.BackBtn.Location = new System.Drawing.Point(285, 258);
-            this.BackBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(86, 83);
-            this.BackBtn.TabIndex = 46;
-            this.BackBtn.TabStop = false;
+            this.PlusjeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
+            this.PlusjeBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PlusjeBtn.BackgroundImage")));
+            this.PlusjeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PlusjeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PlusjeBtn.Image = global::QuizApplicatie.Properties.Resources.plusje;
+            this.PlusjeBtn.Location = new System.Drawing.Point(285, 258);
+            this.PlusjeBtn.Margin = new System.Windows.Forms.Padding(1);
+            this.PlusjeBtn.Name = "PlusjeBtn";
+            this.PlusjeBtn.Size = new System.Drawing.Size(86, 83);
+            this.PlusjeBtn.TabIndex = 46;
+            this.PlusjeBtn.TabStop = false;
+            this.PlusjeBtn.Click += new System.EventHandler(this.PlusjeBtn_Click);
             // 
             // vraagtoevoegen
             // 
@@ -138,20 +139,20 @@ namespace QuizApplicatie
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(407, 362);
-            this.Controls.Add(this.BackBtn);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.PlusjeBtn);
+            this.Controls.Add(this.GoedAntwoordLabel);
+            this.Controls.Add(this.GoedAntwoordTextbox);
+            this.Controls.Add(this.FoutAntwoordLabel);
+            this.Controls.Add(this.FoutAntwoordTextbox);
+            this.Controls.Add(this.VraagLabel);
+            this.Controls.Add(this.VraagTextbox);
             this.Controls.Add(this.vraagToevoegenLable);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "vraagtoevoegen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vraag toevoegen";
-            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlusjeBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,12 +161,12 @@ namespace QuizApplicatie
         #endregion
 
         private System.Windows.Forms.Label vraagToevoegenLable;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox BackBtn;
+        private System.Windows.Forms.TextBox VraagTextbox;
+        private System.Windows.Forms.Label VraagLabel;
+        private System.Windows.Forms.Label FoutAntwoordLabel;
+        private System.Windows.Forms.TextBox FoutAntwoordTextbox;
+        private System.Windows.Forms.Label GoedAntwoordLabel;
+        private System.Windows.Forms.TextBox GoedAntwoordTextbox;
+        private System.Windows.Forms.PictureBox PlusjeBtn;
     }
 }

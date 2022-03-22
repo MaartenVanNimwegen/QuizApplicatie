@@ -127,7 +127,7 @@ namespace QuizApplicatie
             this.VragenGrid.ShowCellToolTips = false;
             this.VragenGrid.ShowEditingIcon = false;
             this.VragenGrid.ShowRowErrors = false;
-            this.VragenGrid.Size = new System.Drawing.Size(1838, 847);
+            this.VragenGrid.Size = new System.Drawing.Size(1838, 767);
             this.VragenGrid.TabIndex = 43;
             this.VragenGrid.DoubleClick += new System.EventHandler(this.VragenGrid_DoubleClick);
             // 
@@ -186,7 +186,7 @@ namespace QuizApplicatie
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(612, 152);
+            this.button1.Location = new System.Drawing.Point(1710, 827);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 23);
             this.button1.TabIndex = 44;
@@ -196,7 +196,7 @@ namespace QuizApplicatie
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(612, 181);
+            this.button2.Location = new System.Drawing.Point(1710, 856);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 23);
             this.button2.TabIndex = 45;
