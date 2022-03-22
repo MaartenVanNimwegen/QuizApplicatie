@@ -17,7 +17,7 @@ namespace QuizApplicatie
             InitializeComponent();
         }
 
-        private void BackBtn_Click(object sender, EventArgs e)
+        private void BackBtn_Click_1(object sender, EventArgs e)
         {
             Close();
         }
