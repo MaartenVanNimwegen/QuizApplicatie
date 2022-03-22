@@ -30,19 +30,23 @@ namespace QuizApplicatie
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VragenBeheer));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.VragenGrid = new System.Windows.Forms.DataGridView();
+            this.VraagLable = new System.Windows.Forms.Label();
+            this.BackBtn = new System.Windows.Forms.PictureBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nummerArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naamArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caregorieArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VraagLable = new System.Windows.Forms.Label();
-            this.BackBtn = new System.Windows.Forms.PictureBox();
+            this.EditBtn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.DeleteBtn = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VragenGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
@@ -55,10 +59,10 @@ namespace QuizApplicatie
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(106)))), ((int)(((byte)(176)))));
             this.panel1.Controls.Add(this.VragenGrid);
-            this.panel1.Location = new System.Drawing.Point(22, 176);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(40, 325);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1879, 882);
+            this.panel1.Size = new System.Drawing.Size(3445, 1628);
             this.panel1.TabIndex = 9;
             // 
             // VragenGrid
@@ -87,30 +91,32 @@ namespace QuizApplicatie
             this.id,
             this.nummerArtikel,
             this.naamArtikel,
-            this.caregorieArtikel});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.VragenGrid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.caregorieArtikel,
+            this.EditBtn,
+            this.DeleteBtn});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.VragenGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.VragenGrid.EnableHeadersVisualStyles = false;
             this.VragenGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.VragenGrid.Location = new System.Drawing.Point(19, 15);
-            this.VragenGrid.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.VragenGrid.Location = new System.Drawing.Point(35, 28);
+            this.VragenGrid.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.VragenGrid.MultiSelect = false;
             this.VragenGrid.Name = "VragenGrid";
             this.VragenGrid.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.VragenGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.VragenGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.VragenGrid.RowHeadersVisible = false;
             this.VragenGrid.RowHeadersWidth = 51;
             this.VragenGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
@@ -123,9 +129,39 @@ namespace QuizApplicatie
             this.VragenGrid.ShowCellToolTips = false;
             this.VragenGrid.ShowEditingIcon = false;
             this.VragenGrid.ShowRowErrors = false;
-            this.VragenGrid.Size = new System.Drawing.Size(1838, 847);
+            this.VragenGrid.Size = new System.Drawing.Size(3370, 1564);
             this.VragenGrid.TabIndex = 43;
             this.VragenGrid.DoubleClick += new System.EventHandler(this.VragenGrid_DoubleClick);
+            // 
+            // VraagLable
+            // 
+            this.VraagLable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.VraagLable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.VraagLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VraagLable.ForeColor = System.Drawing.SystemColors.Control;
+            this.VraagLable.Location = new System.Drawing.Point(40, 50);
+            this.VraagLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.VraagLable.Name = "VraagLable";
+            this.VraagLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.VraagLable.Size = new System.Drawing.Size(3445, 220);
+            this.VraagLable.TabIndex = 8;
+            this.VraagLable.Text = "Vragenbeheer";
+            this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BackBtn
+            // 
+            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
+            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtn.Location = new System.Drawing.Point(59, 113);
+            this.BackBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(75, 81);
+            this.BackBtn.TabIndex = 44;
+            this.BackBtn.TabStop = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // id
             // 
@@ -164,47 +200,40 @@ namespace QuizApplicatie
             this.caregorieArtikel.ReadOnly = true;
             this.caregorieArtikel.Width = 550;
             // 
-            // VraagLable
+            // EditBtn
             // 
-            this.VraagLable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.VraagLable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.VraagLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VraagLable.ForeColor = System.Drawing.SystemColors.Control;
-            this.VraagLable.Location = new System.Drawing.Point(22, 27);
-            this.VraagLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.VraagLable.Name = "VraagLable";
-            this.VraagLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.VraagLable.Size = new System.Drawing.Size(1879, 119);
-            this.VraagLable.TabIndex = 8;
-            this.VraagLable.Text = "Vragenbeheer";
-            this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            this.EditBtn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.EditBtn.HeaderText = "";
+            this.EditBtn.Image = ((System.Drawing.Image)(resources.GetObject("EditBtn.Image")));
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.ReadOnly = true;
             // 
-            // BackBtn
+            // DeleteBtn
             // 
-            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
-            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BackBtn.Location = new System.Drawing.Point(32, 61);
-            this.BackBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(41, 44);
-            this.BackBtn.TabIndex = 44;
-            this.BackBtn.TabStop = false;
-            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            dataGridViewCellStyle5.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle5.NullValue")));
+            this.DeleteBtn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DeleteBtn.HeaderText = "";
+            this.DeleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.Image")));
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.ReadOnly = true;
             // 
             // VragenBeheer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(2288, 1923);
             this.ControlBox = false;
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.VraagLable);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VragenBeheer";
@@ -222,10 +251,12 @@ namespace QuizApplicatie
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label VraagLable;
         private System.Windows.Forms.DataGridView VragenGrid;
+        private System.Windows.Forms.PictureBox BackBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nummerArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn naamArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn caregorieArtikel;
-        private System.Windows.Forms.PictureBox BackBtn;
+        private System.Windows.Forms.DataGridViewImageColumn EditBtn;
+        private System.Windows.Forms.DataGridViewImageColumn DeleteBtn;
     }
 }
