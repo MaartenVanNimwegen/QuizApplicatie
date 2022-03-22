@@ -43,5 +43,10 @@ namespace QuizApplicatie
         {
 
         }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

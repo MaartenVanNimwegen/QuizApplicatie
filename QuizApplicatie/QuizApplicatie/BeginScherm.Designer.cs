@@ -33,13 +33,16 @@ namespace QuizApplicatie
             System.Windows.Forms.Button CustomQuizBtn;
             System.Windows.Forms.Button VragenbeheerBtn;
             System.Windows.Forms.Button ScoresBtn;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.VraagLable = new System.Windows.Forms.Label();
+            this.BackBtn = new System.Windows.Forms.PictureBox();
             QuickplayBtn = new System.Windows.Forms.Button();
             CustomQuizBtn = new System.Windows.Forms.Button();
             VragenbeheerBtn = new System.Windows.Forms.Button();
             ScoresBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // QuickplayBtn
@@ -155,12 +158,27 @@ namespace QuizApplicatie
             this.VraagLable.Text = "Quiz applicatie";
             this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // BackBtn
+            // 
+            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
+            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtn.Location = new System.Drawing.Point(33, 55);
+            this.BackBtn.Margin = new System.Windows.Forms.Padding(1);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(41, 44);
+            this.BackBtn.TabIndex = 45;
+            this.BackBtn.TabStop = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.VraagLable);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -169,6 +187,7 @@ namespace QuizApplicatie
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -176,6 +195,7 @@ namespace QuizApplicatie
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label VraagLable;
+        private System.Windows.Forms.PictureBox BackBtn;
     }
 }
 

@@ -186,12 +186,13 @@ namespace QuizApplicatie
             this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
             this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BackBtn.Location = new System.Drawing.Point(28, 34);
+            this.BackBtn.Location = new System.Drawing.Point(32, 61);
             this.BackBtn.Margin = new System.Windows.Forms.Padding(1);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(41, 44);
             this.BackBtn.TabIndex = 44;
             this.BackBtn.TabStop = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // VragenBeheer
             // 
