@@ -164,17 +164,19 @@ namespace QuizApplicatie
             // id
             // 
             this.id.HeaderText = "id";
+            this.id.MinimumWidth = 608;
             this.id.Name = "id";
             this.id.ReadOnly = true;
             this.id.Visible = false;
+            this.id.Width = 608;
             // 
             // nummerArtikel
             // 
             this.nummerArtikel.HeaderText = "Vraag";
-            this.nummerArtikel.MinimumWidth = 550;
+            this.nummerArtikel.MinimumWidth = 608;
             this.nummerArtikel.Name = "nummerArtikel";
             this.nummerArtikel.ReadOnly = true;
-            this.nummerArtikel.Width = 550;
+            this.nummerArtikel.Width = 608;
             // 
             // naamArtikel
             // 
@@ -182,10 +184,10 @@ namespace QuizApplicatie
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle2;
             this.naamArtikel.HeaderText = "Goed Antwoord";
-            this.naamArtikel.MinimumWidth = 550;
+            this.naamArtikel.MinimumWidth = 608;
             this.naamArtikel.Name = "naamArtikel";
             this.naamArtikel.ReadOnly = true;
-            this.naamArtikel.Width = 550;
+            this.naamArtikel.Width = 608;
             // 
             // caregorieArtikel
             // 
@@ -193,14 +195,14 @@ namespace QuizApplicatie
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle3;
             this.caregorieArtikel.HeaderText = "Fout Antwoord";
-            this.caregorieArtikel.MinimumWidth = 550;
+            this.caregorieArtikel.MinimumWidth = 607;
             this.caregorieArtikel.Name = "caregorieArtikel";
             this.caregorieArtikel.ReadOnly = true;
-            this.caregorieArtikel.Width = 550;
+            this.caregorieArtikel.Width = 607;
             // 
             // EditGridBtn
             // 
-            this.EditGridBtn.HeaderText = "Edit";
+            this.EditGridBtn.HeaderText = "";
             this.EditGridBtn.Image = ((System.Drawing.Image)(resources.GetObject("EditGridBtn.Image")));
             this.EditGridBtn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.EditGridBtn.MinimumWidth = 30;
@@ -210,7 +212,7 @@ namespace QuizApplicatie
             // 
             // DeleteGridBtn
             // 
-            this.DeleteGridBtn.HeaderText = "Delete";
+            this.DeleteGridBtn.HeaderText = "";
             this.DeleteGridBtn.Image = ((System.Drawing.Image)(resources.GetObject("DeleteGridBtn.Image")));
             this.DeleteGridBtn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.DeleteGridBtn.MinimumWidth = 30;
