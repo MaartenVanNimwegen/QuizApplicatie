@@ -53,7 +53,7 @@ namespace QuizApplicatie
             QuickplayBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             QuickplayBtn.ForeColor = System.Drawing.Color.White;
             QuickplayBtn.Location = new System.Drawing.Point(43, 22);
-            QuickplayBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            QuickplayBtn.Margin = new System.Windows.Forms.Padding(2);
             QuickplayBtn.Name = "QuickplayBtn";
             QuickplayBtn.Size = new System.Drawing.Size(484, 138);
             QuickplayBtn.TabIndex = 0;
@@ -73,7 +73,7 @@ namespace QuizApplicatie
             CustomQuizBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             CustomQuizBtn.ForeColor = System.Drawing.Color.White;
             CustomQuizBtn.Location = new System.Drawing.Point(43, 172);
-            CustomQuizBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            CustomQuizBtn.Margin = new System.Windows.Forms.Padding(2);
             CustomQuizBtn.Name = "CustomQuizBtn";
             CustomQuizBtn.Size = new System.Drawing.Size(484, 138);
             CustomQuizBtn.TabIndex = 2;
@@ -93,7 +93,7 @@ namespace QuizApplicatie
             VragenbeheerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             VragenbeheerBtn.ForeColor = System.Drawing.Color.White;
             VragenbeheerBtn.Location = new System.Drawing.Point(43, 321);
-            VragenbeheerBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            VragenbeheerBtn.Margin = new System.Windows.Forms.Padding(2);
             VragenbeheerBtn.Name = "VragenbeheerBtn";
             VragenbeheerBtn.Size = new System.Drawing.Size(484, 138);
             VragenbeheerBtn.TabIndex = 3;
@@ -113,7 +113,7 @@ namespace QuizApplicatie
             ScoresBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             ScoresBtn.ForeColor = System.Drawing.Color.White;
             ScoresBtn.Location = new System.Drawing.Point(43, 470);
-            ScoresBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            ScoresBtn.Margin = new System.Windows.Forms.Padding(2);
             ScoresBtn.Name = "ScoresBtn";
             ScoresBtn.Size = new System.Drawing.Size(484, 138);
             ScoresBtn.TabIndex = 4;
@@ -148,7 +148,7 @@ namespace QuizApplicatie
             this.panel1.Controls.Add(CustomQuizBtn);
             this.panel1.Controls.Add(VragenbeheerBtn);
             this.panel1.Location = new System.Drawing.Point(20, 109);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(576, 627);
             this.panel1.TabIndex = 5;
@@ -163,7 +163,7 @@ namespace QuizApplicatie
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
