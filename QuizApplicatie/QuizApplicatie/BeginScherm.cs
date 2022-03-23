@@ -30,7 +30,8 @@ namespace QuizApplicatie
 
         private void CustomQuizBtn_Click(object sender, EventArgs e)
         {
-
+            CustomQuiz myForm = new CustomQuiz();
+            myForm.ShowDialog();
         }
 
         private void VragenbeheerBtn_Click(object sender, EventArgs e)
