@@ -16,7 +16,7 @@ namespace QuizApplicatie
         public scores()
         {
             InitializeComponent();
-            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizappliatie; User ID = root; Password = ");
+            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ");
             connection.Open();
             MySqlCommand cmd = new MySqlCommand("select * from vragen where id = " + id, connection);
             MySqlDataReader reader = cmd.ExecuteReader();
