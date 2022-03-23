@@ -30,9 +30,7 @@ namespace QuizApplicatie
             VragenGrid.Rows.Clear();
 
 
-            string query = "";
-            string valueToSearch = "";
-            query = "SELECT * FROM vragen";
+            string query = "SELECT * FROM vragen";
 
             var Vragen = new List<VraagClass>();
 

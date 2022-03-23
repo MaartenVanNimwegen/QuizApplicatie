@@ -201,16 +201,22 @@ namespace QuizApplicatie
             // EditGridBtn
             // 
             this.EditGridBtn.HeaderText = "Edit";
-            this.EditGridBtn.Image = global::QuizApplicatie.Properties.Resources.edit;
+            this.EditGridBtn.Image = ((System.Drawing.Image)(resources.GetObject("EditGridBtn.Image")));
+            this.EditGridBtn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.EditGridBtn.MinimumWidth = 30;
             this.EditGridBtn.Name = "EditGridBtn";
             this.EditGridBtn.ReadOnly = true;
+            this.EditGridBtn.Width = 30;
             // 
             // DeleteGridBtn
             // 
             this.DeleteGridBtn.HeaderText = "Delete";
             this.DeleteGridBtn.Image = ((System.Drawing.Image)(resources.GetObject("DeleteGridBtn.Image")));
+            this.DeleteGridBtn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.DeleteGridBtn.MinimumWidth = 30;
             this.DeleteGridBtn.Name = "DeleteGridBtn";
             this.DeleteGridBtn.ReadOnly = true;
+            this.DeleteGridBtn.Width = 30;
             // 
             // VragenBeheer
             // 
