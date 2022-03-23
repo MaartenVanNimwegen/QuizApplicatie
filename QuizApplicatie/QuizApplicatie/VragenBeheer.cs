@@ -74,6 +74,7 @@ namespace QuizApplicatie
         {
             Close();
         }
+      
         private void VragenGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             questionId = (int)VragenGrid.SelectedCells[0].Value;
