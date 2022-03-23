@@ -42,7 +42,13 @@ namespace QuizApplicatie
 
         private void ScoresBtn_Click(object sender, EventArgs e)
         {
+            scores myForm = new scores();
+            myForm.ShowDialog();
+        }
 
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
