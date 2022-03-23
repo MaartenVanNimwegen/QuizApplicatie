@@ -29,12 +29,11 @@ namespace QuizApplicatie
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(scores));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(scores));
             this.VraagLable = new System.Windows.Forms.Label();
-            this.BackBtn = new System.Windows.Forms.PictureBox();
             this.VragenGrid = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naam = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,8 +41,9 @@ namespace QuizApplicatie
             this.gebruiktetijd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.straftijd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumentijd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
+            this.BackBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.VragenGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // VraagLable
@@ -61,20 +61,6 @@ namespace QuizApplicatie
             this.VraagLable.TabIndex = 9;
             this.VraagLable.Text = "Scores";
             this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // BackBtn
-            // 
-            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
-            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BackBtn.Location = new System.Drawing.Point(21, 45);
-            this.BackBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(41, 44);
-            this.BackBtn.TabIndex = 45;
-            this.BackBtn.TabStop = false;
-            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // VragenGrid
             // 
@@ -192,6 +178,20 @@ namespace QuizApplicatie
             this.datumentijd.ReadOnly = true;
             this.datumentijd.Width = 200;
             // 
+            // BackBtn
+            // 
+            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
+            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtn.Location = new System.Drawing.Point(21, 50);
+            this.BackBtn.Margin = new System.Windows.Forms.Padding(1);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(41, 44);
+            this.BackBtn.TabIndex = 47;
+            this.BackBtn.TabStop = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click_1);
+            // 
             // scores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,8 +199,8 @@ namespace QuizApplicatie
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.ControlBox = false;
-            this.Controls.Add(this.VragenGrid);
             this.Controls.Add(this.BackBtn);
+            this.Controls.Add(this.VragenGrid);
             this.Controls.Add(this.VraagLable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -208,8 +208,8 @@ namespace QuizApplicatie
             this.Name = "scores";
             this.Text = "scores";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VragenGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -217,7 +217,6 @@ namespace QuizApplicatie
         #endregion
 
         private System.Windows.Forms.Label VraagLable;
-        private System.Windows.Forms.PictureBox BackBtn;
         private System.Windows.Forms.DataGridView VragenGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn naam;
@@ -225,5 +224,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.DataGridViewTextBoxColumn gebruiktetijd;
         private System.Windows.Forms.DataGridViewTextBoxColumn straftijd;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumentijd;
+        private System.Windows.Forms.PictureBox BackBtn;
     }
 }
