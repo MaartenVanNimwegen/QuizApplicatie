@@ -106,5 +106,13 @@ namespace QuizApplicatie
         {
             Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            vraagtoevoegen myForm = new vraagtoevoegen();
+            myForm.ShowDialog();
+
+            RefreshDataGrid();
+        }
     }
 }
