@@ -16,5 +16,19 @@ namespace QuizApplicatie
         {
             InitializeComponent();
         }
+
+        private void TijdPerVraagAantal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AantalVragen_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Backbtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
