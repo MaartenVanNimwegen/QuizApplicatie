@@ -192,7 +192,6 @@ namespace QuizApplicatie
             this.CancelBtn.Size = new System.Drawing.Size(41, 40);
             this.CancelBtn.TabIndex = 65;
             this.CancelBtn.TabStop = false;
-            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // VragenBeheer
             // 
