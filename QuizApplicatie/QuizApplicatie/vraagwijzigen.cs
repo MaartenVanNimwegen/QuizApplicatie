@@ -13,9 +13,10 @@ namespace QuizApplicatie
 {
     public partial class vraagwijzigen : Form
     {
+        private static string id = "";
+
         private string HuidigVraag = "";
         private string HuidigGoedAntwoord = "";
-        private static string id = "";
         private string HuidigFoutAntwoord = "";
 
         private string Vraag = "";
