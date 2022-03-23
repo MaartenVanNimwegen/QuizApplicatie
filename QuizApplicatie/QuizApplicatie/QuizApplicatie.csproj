@@ -109,6 +109,7 @@
     <Compile Include="scores.Designer.cs">
       <DependentUpon>scores.cs</DependentUpon>
     </Compile>
+    <Compile Include="VraagClass.cs" />
     <Compile Include="vraagtoevoegen.cs">
       <SubType>Form</SubType>
     </Compile>
