@@ -56,5 +56,10 @@ namespace QuizApplicatie
                 rowIndex = VragenGrid.SelectedCells[0].Value.ToString();
             }
         }
+
+        private void CancelBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
