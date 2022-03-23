@@ -22,6 +22,16 @@ namespace QuizApplicatie
             VragenGrid.Rows.Add("A", "B", "C", "D");
             VragenGrid.Rows.Add("A", "B", "C", "D");
         }
+
+        private void RefreshDataGrid()
+        {
+            string query = "";
+            string valueToSearch = "";
+            query = "SELECT * FROM artikelen";
+
+            //Items = new List<Artikel>();
+        }
+
         private void BackBtn_Click(object sender, EventArgs e)
         {
             Close();
