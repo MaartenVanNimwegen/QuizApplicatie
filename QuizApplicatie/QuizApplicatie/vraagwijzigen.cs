@@ -53,7 +53,7 @@ namespace QuizApplicatie
             {
                 MessageBox.Show("Niet alle velden zijn ingevuld!");
             }
-            else if (VraagTextbox.Text.Length > 100 || GoedAntwoordTextbox.Text.Length > 100 || FoutAntwoordTextbox.Text.Length > 100)
+            else if (VraagTextbox.Text.Length > 200 || GoedAntwoordTextbox.Text.Length > 200 || FoutAntwoordTextbox.Text.Length > 200)
             {
                 MessageBox.Show("Het maximale aantal karakters te gebruiken in één of meer van de velden is 50!");
             }

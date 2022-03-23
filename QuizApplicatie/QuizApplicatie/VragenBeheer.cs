@@ -80,6 +80,8 @@ namespace QuizApplicatie
 
         private void VragenGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            var temp = VragenGrid.SelectedCells[5];
+
             if (VragenGrid.CurrentCell != null)
             {
                 rowIndex = VragenGrid.SelectedCells[0].Value.ToString();
