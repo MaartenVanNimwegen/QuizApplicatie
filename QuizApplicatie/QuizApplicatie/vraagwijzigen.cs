@@ -13,7 +13,7 @@ namespace QuizApplicatie
 {
     public partial class vraagwijzigen : Form
     {
-        private static string id = "";
+        public static string id = "";
 
         private string HuidigVraag = "";
         private string HuidigGoedAntwoord = "";
@@ -23,12 +23,12 @@ namespace QuizApplicatie
         private string GoedAntwoord = "";
         private string FoutAntwoord = "";
 
-        public vraagwijzigen()
+        public vraagwijzigen(string rowIndex)
         {
             InitializeComponent();
-            //id = rowId; 
+            id = rowIndex; 
 
-            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizappliatie; User ID = root; Password = ");
+            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ");
             connection.Open();
             MySqlCommand cmd = new MySqlCommand("select * from vragen where id = " + id, connection);
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -53,7 +53,7 @@ namespace QuizApplicatie
             {
                 MessageBox.Show("Niet alle velden zijn ingevuld!");
             }
-            else if (VraagTextbox.Text.Length > 50 || GoedAntwoordTextbox.Text.Length > 50 || FoutAntwoordTextbox.Text.Length > 50)
+            else if (VraagTextbox.Text.Length > 100 || GoedAntwoordTextbox.Text.Length > 100 || FoutAntwoordTextbox.Text.Length > 100)
             {
                 MessageBox.Show("Het maximale aantal karakters te gebruiken in één of meer van de velden is 50!");
             }
@@ -61,12 +61,14 @@ namespace QuizApplicatie
             {
                 MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ");
                 connection.Open();
-                MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET Vraag='" + Vraag + "', GoedAntwoord='" + GoedAntwoord + "', FoutAntwoord='" + FoutAntwoord + "'", connection);
+                MySqlCommand cmd = new MySqlCommand("UPDATE vragen SET Vraag='" + Vraag + "', GoedAntwoord='" + GoedAntwoord + "', FoutAntwoord='" + FoutAntwoord + "' where id = " + id + "", connection);
                 cmd.ExecuteReader();
                 MessageBox.Show("Vraag gewijzigd");
                 VraagTextbox.Text = "";
                 GoedAntwoordTextbox.Text = "";
                 FoutAntwoordTextbox.Text = "";
+                DialogResult = DialogResult.OK; 
+                Close();
             }
         }
     }

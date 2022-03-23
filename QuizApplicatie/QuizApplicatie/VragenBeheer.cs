@@ -78,24 +78,19 @@ namespace QuizApplicatie
             Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            vraagtoevoegen myForm = new vraagtoevoegen();
-            myForm.ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            vraagwijzigen myForm = new vraagwijzigen();
-            myForm.ShowDialog();
-        }
-
         private void VragenGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (VragenGrid.CurrentCell != null)
             {
                 rowIndex = VragenGrid.SelectedCells[0].Value.ToString();
             }
+            vraagwijzigen myForm = new vraagwijzigen(rowIndex);
+            DialogResult dialogResult = myForm.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                RefreshDataGrid();
+            }
+
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
