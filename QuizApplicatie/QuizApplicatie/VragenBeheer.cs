@@ -13,16 +13,13 @@ namespace QuizApplicatie
 {
     public partial class VragenBeheer : Form
     {
-        public static string rowIndex = "";
-
+        int questionId = 0;
 
         public VragenBeheer()
         {
             InitializeComponent();
 
             RefreshDataGrid();
-            //VragenGrid.Rows.Add("A", "B", "C", "D");
-            //VragenGrid.Rows.Add("A", "B", "C", "D");
         }
 
         private void RefreshDataGrid()
@@ -77,22 +74,35 @@ namespace QuizApplicatie
         {
             Close();
         }
-
-        private void VragenGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+      
+        private void VragenGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (VragenGrid.CurrentCell != null)
-            {
-                rowIndex = VragenGrid.SelectedCells[0].Value.ToString();
-            }
-            vraagwijzigen myForm = new vraagwijzigen(rowIndex);
-            DialogResult dialogResult = myForm.ShowDialog();
-            if (dialogResult == DialogResult.OK)
-            {
-                RefreshDataGrid();
-            }
+            questionId = (int)VragenGrid.SelectedCells[0].Value;
+            int selectedColumn = e.ColumnIndex;
 
+            if (selectedColumn != 5)
+            {
+                vraagwijzigen myForm = new vraagwijzigen(questionId);
+                DialogResult dialogResult = myForm.ShowDialog();
+                if (dialogResult == DialogResult.OK)
+                {
+                    RefreshDataGrid();
+                }
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Weet je zeker dat je deze vraag wilt verwijderen?", "Artikel verwijderen", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ");
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand("DELETE FROM vragen where id = " + questionId + "", connection);
+                    cmd.ExecuteReader();
+                    MessageBox.Show("Vraag verwijderd");
+                    RefreshDataGrid();
+                }
+            }
         }
-
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             Close();

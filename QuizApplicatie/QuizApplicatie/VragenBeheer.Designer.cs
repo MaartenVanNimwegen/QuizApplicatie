@@ -37,15 +37,15 @@ namespace QuizApplicatie
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VragenBeheer));
             this.panel1 = new System.Windows.Forms.Panel();
             this.VragenGrid = new System.Windows.Forms.DataGridView();
-            this.VraagLable = new System.Windows.Forms.Label();
-            this.CancelBtn = new System.Windows.Forms.PictureBox();
-            this.AddQuestionBtn = new System.Windows.Forms.PictureBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nummerArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naamArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caregorieArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EditGridBtn = new System.Windows.Forms.DataGridViewImageColumn();
             this.DeleteGridBtn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.VraagLable = new System.Windows.Forms.Label();
+            this.CancelBtn = new System.Windows.Forms.PictureBox();
+            this.AddQuestionBtn = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VragenGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CancelBtn)).BeginInit();
@@ -131,51 +131,7 @@ namespace QuizApplicatie
             this.VragenGrid.ShowRowErrors = false;
             this.VragenGrid.Size = new System.Drawing.Size(1884, 811);
             this.VragenGrid.TabIndex = 43;
-            this.VragenGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VragenGrid_CellDoubleClick);
-            // 
-            // VraagLable
-            // 
-            this.VraagLable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.VraagLable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.VraagLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VraagLable.ForeColor = System.Drawing.SystemColors.Control;
-            this.VraagLable.Location = new System.Drawing.Point(10, 9);
-            this.VraagLable.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.VraagLable.Name = "VraagLable";
-            this.VraagLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.VraagLable.Size = new System.Drawing.Size(1887, 118);
-            this.VraagLable.TabIndex = 8;
-            this.VraagLable.Text = "Vragenbeheer";
-            this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CancelBtn
-            // 
-            this.CancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.CancelBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelBtn.BackgroundImage")));
-            this.CancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CancelBtn.Location = new System.Drawing.Point(20, 44);
-            this.CancelBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(41, 41);
-            this.CancelBtn.TabIndex = 65;
-            this.CancelBtn.TabStop = false;
-            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
-            // 
-            // AddQuestionBtn
-            // 
-            this.AddQuestionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.AddQuestionBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddQuestionBtn.BackgroundImage")));
-            this.AddQuestionBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddQuestionBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddQuestionBtn.Location = new System.Drawing.Point(1803, 34);
-            this.AddQuestionBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.AddQuestionBtn.Name = "AddQuestionBtn";
-            this.AddQuestionBtn.Size = new System.Drawing.Size(69, 69);
-            this.AddQuestionBtn.TabIndex = 66;
-            this.AddQuestionBtn.TabStop = false;
-            this.AddQuestionBtn.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.VragenGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VragenGrid_CellClick);
             // 
             // id
             // 
@@ -235,6 +191,50 @@ namespace QuizApplicatie
             this.DeleteGridBtn.Name = "DeleteGridBtn";
             this.DeleteGridBtn.ReadOnly = true;
             this.DeleteGridBtn.Width = 30;
+            // 
+            // VraagLable
+            // 
+            this.VraagLable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.VraagLable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.VraagLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VraagLable.ForeColor = System.Drawing.SystemColors.Control;
+            this.VraagLable.Location = new System.Drawing.Point(10, 9);
+            this.VraagLable.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.VraagLable.Name = "VraagLable";
+            this.VraagLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.VraagLable.Size = new System.Drawing.Size(1887, 118);
+            this.VraagLable.TabIndex = 8;
+            this.VraagLable.Text = "Vragenbeheer";
+            this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CancelBtn
+            // 
+            this.CancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.CancelBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelBtn.BackgroundImage")));
+            this.CancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CancelBtn.Location = new System.Drawing.Point(20, 44);
+            this.CancelBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(41, 40);
+            this.CancelBtn.TabIndex = 65;
+            this.CancelBtn.TabStop = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
+            // 
+            // AddQuestionBtn
+            // 
+            this.AddQuestionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.AddQuestionBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddQuestionBtn.BackgroundImage")));
+            this.AddQuestionBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddQuestionBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddQuestionBtn.Location = new System.Drawing.Point(1803, 34);
+            this.AddQuestionBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AddQuestionBtn.Name = "AddQuestionBtn";
+            this.AddQuestionBtn.Size = new System.Drawing.Size(69, 69);
+            this.AddQuestionBtn.TabIndex = 66;
+            this.AddQuestionBtn.TabStop = false;
+            this.AddQuestionBtn.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // VragenBeheer
             // 

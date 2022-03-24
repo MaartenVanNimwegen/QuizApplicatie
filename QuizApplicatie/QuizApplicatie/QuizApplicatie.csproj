@@ -89,6 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AntwoordenClass.cs" />
     <Compile Include="BeginScherm.cs">
       <SubType>Form</SubType>
     </Compile>
