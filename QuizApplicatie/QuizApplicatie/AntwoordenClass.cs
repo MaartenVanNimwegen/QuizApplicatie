@@ -10,6 +10,7 @@ namespace QuizApplicatie
     {
         public int id { get; set; }
         public int userId { get; set; }
+        public string naam { get; set; }
         public int vraagId { get; set; }
         public int tijd { get; set; }
         public int strafTijd { get; set; }

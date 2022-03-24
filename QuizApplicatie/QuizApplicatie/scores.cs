@@ -13,7 +13,6 @@ namespace QuizApplicatie
 {
     public partial class scores : Form
     {
-        int antwoordId = 0;
         public scores()
         {
             InitializeComponent();
@@ -23,8 +22,8 @@ namespace QuizApplicatie
         {
             AntwoordGrid.Rows.Clear();
 
-            //string query = "SELECT antwoord.id, speler.naam, antwoord.vraagId, antwoord.tijd, antwoord.strafTijd, antwoord.IsGoedBeantwoord, antwoord.datum FROM antwoord INNER JOIN speler ON antwoord.userId = speler.id;";
-            string query = "SELECT * FROM antwoord;";
+            string query = "SELECT andwoord.id, andwoord.userId, speler.naam, andwoord.vraagId, andwoord.tijd, andwoord.strafTijd, andwoord.IsGoedBeandwoord, andwoord.datum FROM andwoord INNER JOIN speler ON andwoord.userId = speler.id;";
+            //string query = "SELECT * FROM andwoord;";
             var Antwoorden = new List<AntwoordenClass>();
 
             using (MySqlConnection connection = new MySqlConnection())
@@ -42,6 +41,8 @@ namespace QuizApplicatie
                             AntwoordenClass LeAntwoord = new AntwoordenClass();
                             LeAntwoord.id = (int)reader["id"];
                             LeAntwoord.userId = (int)reader["userId"];
+                            LeAntwoord.naam = reader.GetString(2);
+                            LeAntwoord.vraagId = (int)reader["vraagId"];
                             LeAntwoord.tijd = (int)reader["tijd"];
                             LeAntwoord.strafTijd = (int)reader["strafTijd"];
                             LeAntwoord.datum = (DateTime)reader["datum"];
@@ -58,18 +59,13 @@ namespace QuizApplicatie
 
                 if (Andwoord != null)
                 {
-                    AntwoordGrid.Rows.Add(Andwoord.id, Andwoord.userId, Andwoord.tijd + Andwoord.strafTijd, Andwoord.tijd, Andwoord.strafTijd, Andwoord.datum);
+                    AntwoordGrid.Rows.Add(Andwoord.id, Andwoord.naam, Andwoord.tijd + Andwoord.strafTijd, Andwoord.tijd, Andwoord.strafTijd, Andwoord.datum);
                 }
             }
         }
         private void BackBtn_Click_1(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void AntwoordGrid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            antwoordId = (int)AntwoordGrid.SelectedCells[0].Value;
         }
     }
 }

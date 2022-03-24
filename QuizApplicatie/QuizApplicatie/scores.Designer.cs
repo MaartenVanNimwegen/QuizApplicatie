@@ -128,7 +128,6 @@ namespace QuizApplicatie
             this.AntwoordGrid.ShowRowErrors = false;
             this.AntwoordGrid.Size = new System.Drawing.Size(1882, 891);
             this.AntwoordGrid.TabIndex = 46;
-            this.AntwoordGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AntwoordGrid_CellClick);
             // 
             // id
             // 
