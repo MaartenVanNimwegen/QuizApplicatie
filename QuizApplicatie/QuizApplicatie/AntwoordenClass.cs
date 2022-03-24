@@ -13,7 +13,6 @@ namespace QuizApplicatie
         public int vraagId { get; set; }
         public int tijd { get; set; }
         public int strafTijd { get; set; }
-        public int IsGoedBeantwoord { get; set; }
         public DateTime datum { get; set; }
     }
 }

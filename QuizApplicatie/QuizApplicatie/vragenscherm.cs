@@ -40,20 +40,26 @@ namespace QuizApplicatie
 
             for (int i = 0; i <= QuestionAmount; i++)
             {
-                AskQuestion(Questions[i]);
+                //AskQuestion(Questions[i]);
             }
         }
 
+<<<<<<< HEAD
         
 
         private bool AskQuestion(VraagClass Question)
         {
             bool Correct;
+=======
+        //private bool AskQuestion(VraagClass Question)
+        //{
+        //    bool Correct;
+>>>>>>> 96eb17f1c1a4e73e9ccc4872d078e4ef44b2f47c
 
 
 
-            return Correct;
-        }
+        //    return Correct;
+        //}
 
         private List<VraagClass> GetQuestions(int Amount)
         {
