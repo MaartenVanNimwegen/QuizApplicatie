@@ -29,6 +29,7 @@ namespace QuizApplicatie
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VragenScherm));
             this.VraagLable = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,8 +44,10 @@ namespace QuizApplicatie
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BackBtn = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // VraagLable
@@ -60,7 +63,7 @@ namespace QuizApplicatie
             this.VraagLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.VraagLable.Size = new System.Drawing.Size(1797, 119);
             this.VraagLable.TabIndex = 0;
-            this.VraagLable.Text = "Waarom zijn bananen krom?";
+            this.VraagLable.Text = "Vraag";
             this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -183,7 +186,7 @@ namespace QuizApplicatie
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label9.Size = new System.Drawing.Size(1141, 150);
             this.label9.TabIndex = 10;
-            this.label9.Text = "Weet ik veel";
+            this.label9.Text = "Antwoord B";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
@@ -213,7 +216,7 @@ namespace QuizApplicatie
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(1141, 150);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Omdat dat mooier is";
+            this.label8.Text = "Antwoord A";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -242,12 +245,27 @@ namespace QuizApplicatie
             this.panel3.Size = new System.Drawing.Size(1799, 5);
             this.panel3.TabIndex = 6;
             // 
+            // BackBtn
+            // 
+            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
+            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtn.Location = new System.Drawing.Point(79, 66);
+            this.BackBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(41, 41);
+            this.BackBtn.TabIndex = 66;
+            this.BackBtn.TabStop = false;
+            this.BackBtn.Click += new System.EventHandler(this.CancelBtn_Click);
+            // 
             // VragenScherm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -261,6 +279,7 @@ namespace QuizApplicatie
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,5 +300,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox BackBtn;
     }
 }
