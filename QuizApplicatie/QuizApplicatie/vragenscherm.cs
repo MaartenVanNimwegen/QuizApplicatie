@@ -19,6 +19,7 @@ namespace QuizApplicatie
         int GlobalTimer = 0;
         int QuestionIndividualTimer = 0;
         bool CorrectInput;
+        string CorrectAnswer = "";
         bool AcceptingInput = false;
 
 
@@ -38,11 +39,6 @@ namespace QuizApplicatie
             GlobalTimeLabel.Text = TimerStart.ToString() + "s";
             QuestionTimeLabel.Text = TimerStart.ToString() + "s";
 
-
-            QuestionIndividualTimer = 90;
-            TimerPlaying = true;
-            AcceptingInput = true;
-
             for (int i = 0; i <= QuestionAmount - 1; i++)
             {
                 AskQuestion(Questions[i]);
@@ -51,10 +47,8 @@ namespace QuizApplicatie
 
 
 
-        private bool AskQuestion(VraagClass Question)
+        private void AskQuestion(VraagClass Question)
         {
-            bool Correct = false;
-
             VraagLable.Text = Question.vraag;
 
 
@@ -73,13 +67,9 @@ namespace QuizApplicatie
                 AnswerB.Text = Question.correctantwoord;
             }
 
-
-
-
-
-
-
-            return Correct;
+            QuestionIndividualTimer = 90;
+            TimerPlaying = true;
+            AcceptingInput = true;
         }
 
         private List<VraagClass> GetQuestions(int Amount)
@@ -143,21 +133,6 @@ namespace QuizApplicatie
             return randomList;
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BackBtn_Click(object sender, EventArgs e)
         {
             string message = "Weet je zeker dat je de quiz wilt beëindigen? Je scores zullen verloren raken.";
@@ -191,6 +166,55 @@ namespace QuizApplicatie
                 CorrectInput = false;
 
                 // Wrong answer procedure
+            }
+        }
+
+        private void VragenScherm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (AcceptingInput)
+            {
+                if (e.KeyCode == Keys.A || e.KeyCode == Keys.B)
+                {
+                    if (CorrectAnswer == "A")
+                    {
+                        AnswerA.BackColor = Color.Green;
+                        AnswerB.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        AnswerA.BackColor = Color.Red;
+                        AnswerB.BackColor = Color.Green;
+                    }
+                }
+
+
+                if (e.KeyCode == Keys.A)
+                {
+                    HasGivenInput = true;
+                    AnswerA.ForeColor = Color.Yellow;
+
+                    if (CorrectAnswer == "A")
+                    {
+                        CorrectInput = true;
+                    } else
+                    {
+                        CorrectInput = false;
+                    }
+                }
+                else if (e.KeyCode == Keys.B)
+                {
+                    HasGivenInput = true;
+                    AnswerB.ForeColor = Color.Yellow;
+
+                    if (CorrectAnswer == "B")
+                    {
+                        CorrectInput = true;
+                    }
+                    else
+                    {
+                        CorrectInput = false;
+                    }
+                }
             }
         }
     }
