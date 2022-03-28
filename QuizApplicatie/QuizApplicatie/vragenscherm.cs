@@ -21,14 +21,15 @@ namespace QuizApplicatie
         bool CorrectInput;
         string CorrectAnswer = "";
         bool AcceptingInput = false;
+        VraagClass currentquestion;
+        int TijdVanBeantwoorden = 0;
+
+        int strafTijdFouteVraag = 10;
 
 
         // SETTINGS
         int QuestionAmount = 5;
         int TimerStart = 0;
-
-
-
 
         public VragenScherm()
         {
@@ -49,8 +50,9 @@ namespace QuizApplicatie
 
         private void AskQuestion(VraagClass Question)
         {
+            TijdVanBeantwoorden = 0;
             VraagLable.Text = Question.vraag;
-
+            currentquestion = Question;
 
             // Random selecteren van correct antwoord positie A of B
             Random rnd = new Random();
@@ -169,6 +171,103 @@ namespace QuizApplicatie
             }
         }
 
+        // Score opslaan vars
+        public static string naam = NaamInvullen.naam;
+        public static int id = 0;
+        public static int vraagId = 0;
+        public static bool antwoord = true;
+        public static int strafTijd = 0;
+        public static int tijd = 0;
+
+        public void VragenScherm_KeyDown(object sender, KeyEventArgs e)
+        {
+            //
+            string query = "SELECT id FROM speler WHERE naam = '" + naam + "'";
+
+            using (MySqlConnection connection = new MySqlConnection())
+            {
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            id = (int)reader["id"];
+                        }
+                    }
+                    reader.Close();
+
+                }
+            }
+            // Score opslaan vars
+            int vraagId = currentquestion.id;
+            bool antwoord = true;
+            int tijd = 0;
+            int strafTijd = 0;
+            int BeantwoordTijd = TijdVanBeantwoorden;
+
+            if (AcceptingInput)
+            {
+                //int questionTime = 
+                if (e.KeyCode == Keys.A || e.KeyCode == Keys.B)
+                {
+                    if (CorrectAnswer == "A")
+                    {
+                        AnswerA.BackColor = Color.Green;
+                        AnswerB.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        AnswerA.BackColor = Color.Red;
+                        AnswerB.BackColor = Color.Green;
+                    }
+                    AcceptingInput = false;
+                }
+
+
+                if (e.KeyCode == Keys.A)
+                {
+                    HasGivenInput = true;
+                    AnswerA.ForeColor = Color.Yellow;
+
+                    if (CorrectAnswer == "A")
+                    {
+                        CorrectInput = true;
+                        antwoord = true;
+                        AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, 0);
+                    }
+                    else
+                    {
+                        CorrectInput = false;
+                        antwoord = false;
+                        AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, strafTijdFouteVraag);
+
+                    }
+                }
+                else if (e.KeyCode == Keys.B)
+                {
+                    HasGivenInput = true;
+                    AnswerB.ForeColor = Color.Yellow;
+
+                    if (CorrectAnswer == "B")
+                    {
+                        CorrectInput = true;
+                        antwoord = true;
+                        AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, 0);
+                    }
+                    else
+                    {
+                        CorrectInput = false;
+                        antwoord = false;
+                        AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, strafTijdFouteVraag);
+                    }
+                }
+
+            }
+        }
         private void AntwoordOpslaan(int userId, int vraagId, bool antwoord, int tijd, int strafTijd)
         {
             int AntwoordOpVraag = 0;
@@ -192,51 +291,15 @@ namespace QuizApplicatie
                     connection.Open();
                     MySqlDataReader reader = command.ExecuteReader();
                     connection.Close();
-                    Close();
                 }
             }
         }
-        private void VragenScherm_KeyDown(object sender, KeyEventArgs e)
+
+        private void TijdVanAntwoorden_Tick(object sender, EventArgs e)
         {
-            if (AcceptingInput)
+            if(AcceptingInput == true)
             {
-                if (e.KeyCode == Keys.A || e.KeyCode == Keys.B)
-                {
-                    if (CorrectAnswer == "A")
-                    {
-                        AnswerA.BackColor = Color.Green;
-                        AnswerB.BackColor = Color.Red;
-                    }
-                    else
-                    {
-                        AnswerA.BackColor = Color.Red;
-                        AnswerB.BackColor = Color.Green;
-                    }
-                }
-
-
-                if (e.KeyCode == Keys.A)
-                {
-                    HasGivenInput = true;
-                    AnswerA.ForeColor = Color.Yellow;
-
-                    if (CorrectAnswer == "A")
-                    {
-                        CorrectInput = true;
-                    }
-                    else
-                    {
-                        CorrectInput = false;
-                    }
-                }
-                else if (e.KeyCode == Keys.B)
-                {
-                    HasGivenInput = true;
-                    AnswerB.ForeColor = Color.Yellow;
-
-
-                }
-
+                TijdVanBeantwoorden ++;
             }
         }
     }

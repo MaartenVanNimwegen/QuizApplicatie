@@ -48,6 +48,7 @@ namespace QuizApplicatie
             this.label7 = new System.Windows.Forms.Label();
             this.BackBtn = new System.Windows.Forms.PictureBox();
             this.GlobalCountUpTimer = new System.Windows.Forms.Timer(this.components);
+            this.TijdVanAntwoorden = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
@@ -257,17 +258,6 @@ namespace QuizApplicatie
             this.label7.Text = "A";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.Khaki;
-            this.panel3.Location = new System.Drawing.Point(55, 142);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2661, 5);
-            this.panel3.TabIndex = 6;
-            // 
             // BackBtn
             // 
             this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
@@ -287,6 +277,12 @@ namespace QuizApplicatie
             this.GlobalCountUpTimer.Enabled = true;
             this.GlobalCountUpTimer.Interval = 1000;
             this.GlobalCountUpTimer.Tick += new System.EventHandler(this.GlobalTimer_Tick);
+            // 
+            // TijdVanAntwoorden
+            // 
+            this.TijdVanAntwoorden.Enabled = true;
+            this.TijdVanAntwoorden.Interval = 1000;
+            this.TijdVanAntwoorden.Tick += new System.EventHandler(this.TijdVanAntwoorden_Tick);
             // 
             // VragenScherm
             // 
@@ -332,5 +328,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.Timer GlobalCountUpTimer;
         private System.Windows.Forms.Label GlobalTimeLabel;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer TijdVanAntwoorden;
     }
 }
