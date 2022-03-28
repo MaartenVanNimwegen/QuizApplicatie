@@ -22,9 +22,7 @@ namespace QuizApplicatie
         {
             AntwoordGrid.Rows.Clear();
 
-            string query = "SELECT andwoord.userId, speler.naam, SUM(andwoord.tijd) AS Tijd, SUM(andwoord.strafTijd) AS StrafTijd,SUM(andwoord.tijd+andwoord.strafTijd) AS TotaalScore
-FROM andwoord INNER JOIN speler ON andwoord.userId = speler.id
-GROUP BY andwoord.userId, speler.naam";
+            string query = "SELECT andwoord.userId, speler.naam, SUM(andwoord.tijd) AS Tijd, SUM(andwoord.strafTijd) AS StrafTijd,SUM(andwoord.tijd+andwoord.strafTijd) AS TotaalScore FROM andwoord INNER JOIN speler ON andwoord.userId = speler.id GROUP BY andwoord.userId, speler.naam";
             var Antwoorden = new List<AntwoordenClass>();
 
             using (MySqlConnection connection = new MySqlConnection())
