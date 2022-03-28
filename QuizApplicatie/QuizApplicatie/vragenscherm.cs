@@ -194,22 +194,31 @@ namespace QuizApplicatie
             }
         }
 
-        private void AntwoordOpslaan (int userId, int vraagId, bool antwoord)
+        private void AntwoordOpslaan (int userId, int vraagId, bool antwoord, int tijd, int strafTijd)
         {
             int AntwoordOpVraag = 0;
             if(antwoord == true)
             {
-                AntwoordOpVraag = 0;
+                AntwoordOpVraag = 1;
             }
             else
             {
-                AntwoordOpVraag = 1;
+                AntwoordOpVraag = 0;
             }
 
+            string query = "INSERT INTO andwoord (userId, vraagId, tijd, strafTijd, IsGoedBeandwoord, datum) VALUES ('" + userId + "', '" + vraagId + "', '" + tijd + "', '" + strafTijd + "', '" + AntwoordOpVraag + "', now())";
 
-
-            // insert into 
-            // INSERT INTO andwoord ('','','') VALUES ()
+            using (MySqlConnection connection = new MySqlConnection())
+            {
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+                    connection.Close();
+                    Close();
+                }
+            }
         }
     }
 }
