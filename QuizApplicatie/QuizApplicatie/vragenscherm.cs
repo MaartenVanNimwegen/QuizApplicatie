@@ -205,6 +205,19 @@ namespace QuizApplicatie
                 {
                     HasGivenInput = true;
                     AnswerB.ForeColor = Color.Yellow;
+        private void AntwoordOpslaan (int userId, int vraagId, bool antwoord)
+        {
+            int AntwoordOpVraag = 0;
+            if(antwoord == true)
+            {
+                AntwoordOpVraag = 0;
+            }
+            else
+            {
+                AntwoordOpVraag = 1;
+            }
+
+
 
                     if (CorrectAnswer == "B")
                     {
@@ -216,6 +229,8 @@ namespace QuizApplicatie
                     }
                 }
             }
+            // insert into 
+            // INSERT INTO andwoord ('','','') VALUES ()
         }
     }
 }
