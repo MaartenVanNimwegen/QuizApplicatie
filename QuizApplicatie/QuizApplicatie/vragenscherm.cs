@@ -20,6 +20,7 @@ namespace QuizApplicatie
         int QuestionIndividualTimer = 0;
         bool CorrectInput;
         string CorrectAnswer = "";
+        string GivenInput = "";
         bool AcceptingInput = false;
 
 
@@ -58,14 +59,29 @@ namespace QuizApplicatie
 
             if (Dice == 1)
             {
+                CorrectAnswer = "A";
                 AnswerA.Text = Question.correctantwoord;
                 AnswerB.Text = Question.incorrectantwoord;
             }
             else if (Dice == 2)
             {
+                CorrectAnswer = "B";
                 AnswerA.Text = Question.incorrectantwoord;
                 AnswerB.Text = Question.correctantwoord;
             }
+
+
+            while (HasGivenInput == true)
+            {
+                if (GivenInput == CorrectAnswer)
+                {
+                    VraagLable.Text = "GOED ANTWOORD BITCHESSS!";
+                } else
+                {
+                    VraagLable.Text = "FOUT ANTWOORD CLOWIE!!!!";
+                }
+            }
+
 
             QuestionIndividualTimer = 90;
             TimerPlaying = true;
@@ -175,15 +191,25 @@ namespace QuizApplicatie
             {
                 if (e.KeyCode == Keys.A || e.KeyCode == Keys.B)
                 {
+                    AcceptingInput = false;
+                    HasGivenInput = true;
+                    TimerPlaying = false;
+
                     if (CorrectAnswer == "A")
                     {
-                        AnswerA.BackColor = Color.Green;
-                        AnswerB.BackColor = Color.Red;
+                        AnswerA.BackColor = Color.FromArgb(61, 196, 45);
+                        ALetter.BackColor = Color.FromArgb(61, 196, 45);
+
+                        AnswerB.BackColor = Color.FromArgb(242, 57, 24);
+                        BLetter.BackColor = Color.FromArgb(242, 57, 24);
                     }
                     else
                     {
-                        AnswerA.BackColor = Color.Red;
-                        AnswerB.BackColor = Color.Green;
+                        AnswerA.BackColor = Color.FromArgb(242, 57, 24);
+                        ALetter.BackColor = Color.FromArgb(242, 57, 24);
+
+                        AnswerB.BackColor = Color.FromArgb(61, 196, 45);
+                        BLetter.BackColor = Color.FromArgb(61, 196, 45);
                     }
                 }
 
@@ -191,7 +217,10 @@ namespace QuizApplicatie
                 if (e.KeyCode == Keys.A)
                 {
                     HasGivenInput = true;
+                    GivenInput = "A";
+
                     AnswerA.ForeColor = Color.Yellow;
+                    ALetter.ForeColor = Color.Yellow;
 
                     if (CorrectAnswer == "A")
                     {
@@ -205,12 +234,26 @@ namespace QuizApplicatie
                 else if (e.KeyCode == Keys.B)
                 {
                     HasGivenInput = true;
+                    GivenInput = "B";
+
                     AnswerB.ForeColor = Color.Yellow;
+                    BLetter.ForeColor = Color.Yellow;
 
-
+                    if (CorrectAnswer == "B")
+                    {
+                        CorrectInput = true;
+                    }
+                    else
+                    {
+                        CorrectInput = false;
+                    }
                 }
             }
         }
 
+        private void AnswerA_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

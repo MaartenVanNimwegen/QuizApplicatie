@@ -43,9 +43,9 @@ namespace QuizApplicatie
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AnswerB = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.BLetter = new System.Windows.Forms.Label();
             this.AnswerA = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.ALetter = new System.Windows.Forms.Label();
             this.BackBtn = new System.Windows.Forms.PictureBox();
             this.GlobalCountUpTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -188,9 +188,9 @@ namespace QuizApplicatie
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
             this.panel2.Controls.Add(this.AnswerB);
-            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.BLetter);
             this.panel2.Controls.Add(this.AnswerA);
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.ALetter);
             this.panel2.Location = new System.Drawing.Point(57, 182);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
@@ -212,20 +212,20 @@ namespace QuizApplicatie
             this.AnswerB.Text = "Antwoord B";
             this.AnswerB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // BLetter
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(28, 519);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label10.Size = new System.Drawing.Size(264, 247);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "B";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BLetter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BLetter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
+            this.BLetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BLetter.ForeColor = System.Drawing.SystemColors.Control;
+            this.BLetter.Location = new System.Drawing.Point(28, 519);
+            this.BLetter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BLetter.Name = "BLetter";
+            this.BLetter.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BLetter.Size = new System.Drawing.Size(264, 247);
+            this.BLetter.TabIndex = 9;
+            this.BLetter.Text = "B";
+            this.BLetter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AnswerA
             // 
@@ -241,21 +241,22 @@ namespace QuizApplicatie
             this.AnswerA.TabIndex = 8;
             this.AnswerA.Text = "Antwoord A";
             this.AnswerA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AnswerA.Click += new System.EventHandler(this.AnswerA_Click);
             // 
-            // label7
+            // ALetter
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(28, 120);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(264, 247);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "A";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ALetter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ALetter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
+            this.ALetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ALetter.ForeColor = System.Drawing.SystemColors.Control;
+            this.ALetter.Location = new System.Drawing.Point(28, 120);
+            this.ALetter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ALetter.Name = "ALetter";
+            this.ALetter.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ALetter.Size = new System.Drawing.Size(264, 247);
+            this.ALetter.TabIndex = 7;
+            this.ALetter.Text = "A";
+            this.ALetter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BackBtn
             // 
@@ -282,7 +283,7 @@ namespace QuizApplicatie
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1483, 843);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -314,9 +315,9 @@ namespace QuizApplicatie
         private System.Windows.Forms.Label ExtraSecondsLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label AnswerA;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label ALetter;
         private System.Windows.Forms.Label AnswerB;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label BLetter;
         private System.Windows.Forms.PictureBox BackBtn;
         private System.Windows.Forms.Timer GlobalCountUpTimer;
         private System.Windows.Forms.Label GlobalTimeLabel;
