@@ -35,13 +35,11 @@ namespace QuizApplicatie
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(scores));
             this.VraagLable = new System.Windows.Forms.Label();
             this.AntwoordGrid = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BackBtn = new System.Windows.Forms.PictureBox();
             this.naam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotaleTijd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gebruiktetijd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.straftijd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datumentijd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BackBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.AntwoordGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
             this.SuspendLayout();
@@ -85,12 +83,10 @@ namespace QuizApplicatie
             this.AntwoordGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.AntwoordGrid.ColumnHeadersHeight = 40;
             this.AntwoordGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
             this.naam,
             this.TotaleTijd,
             this.gebruiktetijd,
-            this.straftijd,
-            this.datumentijd});
+            this.straftijd});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(171)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,14 +125,19 @@ namespace QuizApplicatie
             this.AntwoordGrid.Size = new System.Drawing.Size(1882, 891);
             this.AntwoordGrid.TabIndex = 46;
             // 
-            // id
+            // BackBtn
             // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 10;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            this.id.Width = 200;
+            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
+            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtn.Location = new System.Drawing.Point(21, 50);
+            this.BackBtn.Margin = new System.Windows.Forms.Padding(1);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(41, 44);
+            this.BackBtn.TabIndex = 47;
+            this.BackBtn.TabStop = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click_1);
             // 
             // naam
             // 
@@ -170,28 +171,6 @@ namespace QuizApplicatie
             this.straftijd.ReadOnly = true;
             this.straftijd.Width = 200;
             // 
-            // datumentijd
-            // 
-            this.datumentijd.HeaderText = "Datum en Tijd";
-            this.datumentijd.MinimumWidth = 10;
-            this.datumentijd.Name = "datumentijd";
-            this.datumentijd.ReadOnly = true;
-            this.datumentijd.Width = 200;
-            // 
-            // BackBtn
-            // 
-            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
-            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BackBtn.Location = new System.Drawing.Point(21, 50);
-            this.BackBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(41, 44);
-            this.BackBtn.TabIndex = 47;
-            this.BackBtn.TabStop = false;
-            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click_1);
-            // 
             // scores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,12 +197,10 @@ namespace QuizApplicatie
 
         private System.Windows.Forms.Label VraagLable;
         private System.Windows.Forms.DataGridView AntwoordGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.PictureBox BackBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn naam;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotaleTijd;
         private System.Windows.Forms.DataGridViewTextBoxColumn gebruiktetijd;
         private System.Windows.Forms.DataGridViewTextBoxColumn straftijd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datumentijd;
-        private System.Windows.Forms.PictureBox BackBtn;
     }
 }

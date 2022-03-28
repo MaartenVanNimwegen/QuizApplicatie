@@ -19,7 +19,7 @@ namespace QuizApplicatie
 
         private void button1_Click(object sender, EventArgs e)
         {
-            VragenScherm myForm = new VragenScherm();
+            NaamInvullen myForm = new NaamInvullen();
             myForm.ShowDialog();
         }
 
@@ -30,7 +30,7 @@ namespace QuizApplicatie
 
         private void CustomQuizBtn_Click(object sender, EventArgs e)
         {
-            CustomQuiz myForm = new CustomQuiz();
+            NaamInvullenCustom myForm = new NaamInvullenCustom();
             myForm.ShowDialog();
         }
 
