@@ -14,9 +14,20 @@ namespace QuizApplicatie
     public partial class VragenScherm : Form
     {
         List<VraagClass> Vragen = new List<VraagClass>();
+        bool HasGivenInput = false;
+        bool TimerPlaying = false;
+        int GlobalTimer = 0;
+        int QuestionIndividualTimer = 0;
+        bool CorrectInput;
+        bool AcceptingInput = false;
+        
 
         // SETTINGS
         int QuestionAmount = 5;
+        int TimerStart = 0;
+
+
+
 
         public VragenScherm()
         {
@@ -24,15 +35,26 @@ namespace QuizApplicatie
 
             InitializeComponent();
 
+            GlobalTimeLabel.Text = TimerStart.ToString() + "s";
+            QuestionTimeLabel.Text = TimerStart.ToString() + "s";
+
             for (int i = 0; i <= QuestionAmount; i++)
             {
                 //AskQuestion(Questions[i]);
             }
         }
 
+<<<<<<< HEAD
+        
+
+        private bool AskQuestion(VraagClass Question)
+        {
+            bool Correct;
+=======
         //private bool AskQuestion(VraagClass Question)
         //{
         //    bool Correct;
+>>>>>>> 96eb17f1c1a4e73e9ccc4872d078e4ef44b2f47c
 
 
 
@@ -74,8 +96,6 @@ namespace QuizApplicatie
 
             List<int> Qids = NewNumber(Amount, 1, Vragen.Count);
             var SortedQuestions = new List<VraagClass>();
-
-
 
             for (int i = 0; i <= Amount - 1; i++)
             {
@@ -135,6 +155,28 @@ namespace QuizApplicatie
                 Close();
             }
                 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (TimerPlaying == true)
+            {
+                GlobalTimer++;
+                GlobalTimeLabel.Text = GlobalTimer.ToString() + "s";
+            }
+
+            if (TimerPlaying == true && QuestionIndividualTimer > 0)
+            {
+                QuestionIndividualTimer--;
+                QuestionTimeLabel.Text = QuestionIndividualTimer.ToString() + "s";
+            } else if (QuestionIndividualTimer <= 0)
+            {
+                AcceptingInput = false;
+                TimerPlaying = false;
+                CorrectInput = false;
+
+                // Wrong answer procedure
+            }
         }
     }
 }
