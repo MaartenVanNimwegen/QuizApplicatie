@@ -193,5 +193,18 @@ namespace QuizApplicatie
                 // Wrong answer procedure
             }
         }
+        private void AntwoordGegeven()
+        {
+            int Antwoord = 0;
+
+            if (Antwoord == 1)
+            {
+                
+            }
+            else if (Antwoord == 0)
+            {
+
+            }
+        }
     }
 }
