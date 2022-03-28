@@ -46,7 +46,6 @@ namespace QuizApplicatie
             this.label10 = new System.Windows.Forms.Label();
             this.AnswerA = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.BackBtn = new System.Windows.Forms.PictureBox();
             this.GlobalCountUpTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -65,7 +64,7 @@ namespace QuizApplicatie
             this.VraagLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.VraagLable.Name = "VraagLable";
             this.VraagLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.VraagLable.Size = new System.Drawing.Size(2659, 119);
+            this.VraagLable.Size = new System.Drawing.Size(1822, 119);
             this.VraagLable.TabIndex = 0;
             this.VraagLable.Text = "Vraag";
             this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,8 +82,8 @@ namespace QuizApplicatie
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.QuestionTimeLabel);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(2390, 182);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(1553, 182);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(326, 861);
             this.panel1.TabIndex = 4;
@@ -187,18 +186,15 @@ namespace QuizApplicatie
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
             this.panel2.Controls.Add(this.AnswerB);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.AnswerA);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(57, 182);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2316, 861);
+            this.panel2.Size = new System.Drawing.Size(1484, 861);
             this.panel2.TabIndex = 5;
             // 
             // AnswerB
@@ -207,7 +203,7 @@ namespace QuizApplicatie
             this.AnswerB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.AnswerB.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnswerB.ForeColor = System.Drawing.SystemColors.Control;
-            this.AnswerB.Location = new System.Drawing.Point(712, 557);
+            this.AnswerB.Location = new System.Drawing.Point(263, 592);
             this.AnswerB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AnswerB.Name = "AnswerB";
             this.AnswerB.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -222,7 +218,7 @@ namespace QuizApplicatie
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(459, 499);
+            this.label10.Location = new System.Drawing.Point(28, 519);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -236,8 +232,8 @@ namespace QuizApplicatie
             this.AnswerA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AnswerA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.AnswerA.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnswerA.ForeColor = System.Drawing.SystemColors.Control;
-            this.AnswerA.Location = new System.Drawing.Point(712, 158);
+            this.AnswerA.ForeColor = System.Drawing.Color.White;
+            this.AnswerA.Location = new System.Drawing.Point(281, 178);
             this.AnswerA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AnswerA.Name = "AnswerA";
             this.AnswerA.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -252,7 +248,7 @@ namespace QuizApplicatie
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(459, 100);
+            this.label7.Location = new System.Drawing.Point(28, 120);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -279,7 +275,7 @@ namespace QuizApplicatie
             this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtn.Location = new System.Drawing.Point(79, 66);
-            this.BackBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(41, 41);
             this.BackBtn.TabIndex = 66;
@@ -299,17 +295,17 @@ namespace QuizApplicatie
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.BackBtn);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.VraagLable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VragenScherm";
             this.Text = "vragenscherm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.VragenScherm_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).EndInit();
@@ -328,7 +324,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label ExtraSecondsLabel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label AnswerA;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label AnswerB;
