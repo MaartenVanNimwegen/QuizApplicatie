@@ -72,6 +72,7 @@ namespace QuizApplicatie
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "NaamInvullenCustom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NaamInvullenCustom";
             this.ResumeLayout(false);
             this.PerformLayout();

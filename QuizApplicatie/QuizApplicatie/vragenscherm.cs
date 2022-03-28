@@ -193,18 +193,23 @@ namespace QuizApplicatie
                 // Wrong answer procedure
             }
         }
-        private void AntwoordGegeven()
+
+        private void AntwoordOpslaan (int userId, int vraagId, bool antwoord)
         {
-            int Antwoord = 0;
-
-            if (Antwoord == 1)
+            int AntwoordOpVraag = 0;
+            if(antwoord == true)
             {
-                
+                AntwoordOpVraag = 0;
             }
-            else if (Antwoord == 0)
+            else
             {
-
+                AntwoordOpVraag = 1;
             }
+
+
+
+            // insert into 
+            // INSERT INTO andwoord ('','','') VALUES ()
         }
     }
 }
