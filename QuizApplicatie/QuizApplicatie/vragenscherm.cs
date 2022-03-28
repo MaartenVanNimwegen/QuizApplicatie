@@ -20,7 +20,7 @@ namespace QuizApplicatie
         int QuestionIndividualTimer = 0;
         bool CorrectInput;
         bool AcceptingInput = false;
-        
+
 
         // SETTINGS
         int QuestionAmount = 5;
@@ -38,15 +38,47 @@ namespace QuizApplicatie
             GlobalTimeLabel.Text = TimerStart.ToString() + "s";
             QuestionTimeLabel.Text = TimerStart.ToString() + "s";
 
-            for (int i = 0; i <= QuestionAmount; i++)
+
+            QuestionIndividualTimer = 90;
+            TimerPlaying = true;
+            AcceptingInput = true;
+
+            for (int i = 0; i <= QuestionAmount - 1; i++)
             {
-                //AskQuestion(Questions[i]);
+                AskQuestion(Questions[i]);
             }
         }
+
+
 
         private bool AskQuestion(VraagClass Question)
         {
             bool Correct = false;
+
+            VraagLable.Text = Question.vraag;
+
+
+            // Random selecteren van correct antwoord positie A of B
+            Random rnd = new Random();
+            int Dice = rnd.Next(1, 2);
+
+            if (Dice == 1)
+            {
+                AnswerA.Text = Question.correctantwoord;
+                AnswerB.Text = Question.incorrectantwoord;
+            }
+            else if (Dice == 2)
+            {
+                AnswerA.Text = Question.incorrectantwoord;
+                AnswerB.Text = Question.correctantwoord;
+            }
+
+
+
+
+
+
+
             return Correct;
         }
 
@@ -83,18 +115,11 @@ namespace QuizApplicatie
                 }
             }
 
+            // unieke ids van de vragen.
             List<int> Qids = NewNumber(Amount, 1, Vragen.Count);
-            var SortedQuestions = new List<VraagClass>();
 
-            for (int i = 0; i <= Amount - 1; i++)
-            {
-                var Vraag = Vragen[i];
-
-                if (Vraag != null)
-                {
-                    SortedQuestions.Insert(i,  Vragen[Qids[i]] );
-                }
-            }
+            // de vragen die bij de ids (zie hierboven) horen.
+            List<VraagClass> SortedQuestions = Vragen.Where(vraag => Qids.Contains(vraag.id)).ToList();
 
             return SortedQuestions;
         }
@@ -106,7 +131,7 @@ namespace QuizApplicatie
             Random Number = new Random();
             List<int> randomList = new List<int>();
 
-            for (int i = 0; i <= Amount; i++)
+            while (randomList.Count < Amount)
             {
                 MyNumber = Number.Next(Start, End);
                 if (!randomList.Contains(MyNumber))
@@ -133,7 +158,7 @@ namespace QuizApplicatie
 
         }
 
-        private void CancelBtn_Click(object sender, EventArgs e)
+        private void BackBtn_Click(object sender, EventArgs e)
         {
             string message = "Weet je zeker dat je de quiz wilt beëindigen? Je scores zullen verloren raken.";
             string caption = "Quiz beëindigen";
@@ -143,10 +168,10 @@ namespace QuizApplicatie
             {
                 Close();
             }
-                
+
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void GlobalTimer_Tick(object sender, EventArgs e)
         {
             if (TimerPlaying == true)
             {
@@ -158,7 +183,8 @@ namespace QuizApplicatie
             {
                 QuestionIndividualTimer--;
                 QuestionTimeLabel.Text = QuestionIndividualTimer.ToString() + "s";
-            } else if (QuestionIndividualTimer <= 0)
+            }
+            else if (QuestionIndividualTimer <= 0)
             {
                 AcceptingInput = false;
                 TimerPlaying = false;
