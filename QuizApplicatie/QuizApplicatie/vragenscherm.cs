@@ -44,22 +44,11 @@ namespace QuizApplicatie
             }
         }
 
-<<<<<<< HEAD
-        
-
         private bool AskQuestion(VraagClass Question)
         {
-            bool Correct;
-=======
-        //private bool AskQuestion(VraagClass Question)
-        //{
-        //    bool Correct;
->>>>>>> 96eb17f1c1a4e73e9ccc4872d078e4ef44b2f47c
-
-
-
-        //    return Correct;
-        //}
+            bool Correct = false;
+            return Correct;
+        }
 
         private List<VraagClass> GetQuestions(int Amount)
         {

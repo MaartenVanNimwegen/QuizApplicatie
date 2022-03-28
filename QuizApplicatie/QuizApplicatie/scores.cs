@@ -22,8 +22,9 @@ namespace QuizApplicatie
         {
             AntwoordGrid.Rows.Clear();
 
-            string query = "SELECT andwoord.id, andwoord.userId, speler.naam, andwoord.vraagId, andwoord.tijd, andwoord.strafTijd, andwoord.IsGoedBeandwoord, andwoord.datum FROM andwoord INNER JOIN speler ON andwoord.userId = speler.id;";
-            //string query = "SELECT * FROM andwoord;";
+            string query = "SELECT andwoord.userId, speler.naam, SUM(andwoord.tijd) AS Tijd, SUM(andwoord.strafTijd) AS StrafTijd,SUM(andwoord.tijd+andwoord.strafTijd) AS TotaalScore
+FROM andwoord INNER JOIN speler ON andwoord.userId = speler.id
+GROUP BY andwoord.userId, speler.naam";
             var Antwoorden = new List<AntwoordenClass>();
 
             using (MySqlConnection connection = new MySqlConnection())
@@ -45,7 +46,7 @@ namespace QuizApplicatie
                             LeAntwoord.vraagId = (int)reader["vraagId"];
                             LeAntwoord.tijd = (int)reader["tijd"];
                             LeAntwoord.strafTijd = (int)reader["strafTijd"];
-                            LeAntwoord.datum = (DateTime)reader["datum"];
+                            LeAntwoord.datum = (DateTime)reader["datum"];   
 
                             Antwoorden.Add(LeAntwoord);
                         }
