@@ -48,6 +48,7 @@ namespace QuizApplicatie
             this.ALetter = new System.Windows.Forms.Label();
             this.BackBtn = new System.Windows.Forms.PictureBox();
             this.GlobalCountUpTimer = new System.Windows.Forms.Timer(this.components);
+            this.TijdVanAntwoorden = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
@@ -277,6 +278,12 @@ namespace QuizApplicatie
             this.GlobalCountUpTimer.Interval = 1000;
             this.GlobalCountUpTimer.Tick += new System.EventHandler(this.GlobalTimer_Tick);
             // 
+            // TijdVanAntwoorden
+            // 
+            this.TijdVanAntwoorden.Enabled = true;
+            this.TijdVanAntwoorden.Interval = 1000;
+            this.TijdVanAntwoorden.Tick += new System.EventHandler(this.TijdVanAntwoorden_Tick);
+            // 
             // VragenScherm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,5 +328,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.Timer GlobalCountUpTimer;
         private System.Windows.Forms.Label GlobalTimeLabel;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer TijdVanAntwoorden;
     }
 }
