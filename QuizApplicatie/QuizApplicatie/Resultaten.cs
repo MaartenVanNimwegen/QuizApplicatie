@@ -22,6 +22,5 @@ namespace QuizApplicatie
             Close();
         }
 
-        private void 
     }
 }
