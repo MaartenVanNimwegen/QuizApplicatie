@@ -139,7 +139,7 @@ namespace QuizApplicatie
         {
             Random rnd = new Random();
             int Rid = rnd.Next(0, Questions.Count - 1);
-
+            
             return Rid;
         }
 
