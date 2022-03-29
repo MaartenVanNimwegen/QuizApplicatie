@@ -81,6 +81,7 @@ namespace QuizApplicatie
             this.GoedBeantwoordeVragen.TabIndex = 12;
             this.GoedBeantwoordeVragen.Text = "Goed beantwoorde vragen: 0";
             this.GoedBeantwoordeVragen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GoedBeantwoordeVragen.Click += new System.EventHandler(this.GoedBeantwoordeVragen_Click);
             // 
             // TotaleScore
             // 
@@ -91,7 +92,7 @@ namespace QuizApplicatie
             this.TotaleScore.Name = "TotaleScore";
             this.TotaleScore.Size = new System.Drawing.Size(765, 150);
             this.TotaleScore.TabIndex = 13;
-            this.TotaleScore.Text = "Totale score: 0";
+            this.TotaleScore.Text = "Totale tijd: 0";
             this.TotaleScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FoutBeantwoordeVragen
