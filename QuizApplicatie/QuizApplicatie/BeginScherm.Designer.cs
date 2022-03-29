@@ -37,6 +37,7 @@ namespace QuizApplicatie
             this.panel1 = new System.Windows.Forms.Panel();
             this.VraagLable = new System.Windows.Forms.Label();
             this.BackBtn = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             QuickplayBtn = new System.Windows.Forms.Button();
             CustomQuizBtn = new System.Windows.Forms.Button();
             VragenbeheerBtn = new System.Windows.Forms.Button();
@@ -131,6 +132,7 @@ namespace QuizApplicatie
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(106)))), ((int)(((byte)(176)))));
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(QuickplayBtn);
             this.panel1.Controls.Add(ScoresBtn);
             this.panel1.Controls.Add(CustomQuizBtn);
@@ -172,6 +174,19 @@ namespace QuizApplicatie
             this.BackBtn.TabStop = false;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(729, 661);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(400, 150);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Resultaten";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +211,7 @@ namespace QuizApplicatie
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label VraagLable;
         private System.Windows.Forms.PictureBox BackBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
 
