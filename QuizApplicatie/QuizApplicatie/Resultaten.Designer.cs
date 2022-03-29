@@ -81,7 +81,6 @@ namespace QuizApplicatie
             this.GoedBeantwoordeVragen.TabIndex = 12;
             this.GoedBeantwoordeVragen.Text = "Goed beantwoorde vragen: 0";
             this.GoedBeantwoordeVragen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.GoedBeantwoordeVragen.Click += new System.EventHandler(this.GoedBeantwoordeVragen_Click);
             // 
             // TotaleScore
             // 
