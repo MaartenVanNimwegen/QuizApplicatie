@@ -27,7 +27,9 @@ namespace QuizApplicatie
         int TijdVanBeantwoorden = 0;
         int defaultAftelNaarVolgende = 3;
         int AftelNaarVolgende = 3;
-        
+        int QuestionsCurrentListIndex = 0;
+        List<VraagClass> Questions;
+
         bool IsCountingDown = false;
 
 
@@ -40,7 +42,7 @@ namespace QuizApplicatie
 
         public VragenScherm()
         {
-            List<VraagClass> Questions = GetQuestions(QuestionAmount);
+            Questions = GetQuestions(QuestionAmount);
 
             InitializeComponent();
 
@@ -50,15 +52,12 @@ namespace QuizApplicatie
             AftelNaarVolgende = defaultAftelNaarVolgende;
             QuestionIndividualTimer = defaultQuestionIndividualTimer;
 
-            for (int i = 0; i <= QuestionAmount - 1; i++)
-            {
-                AskQuestion(Questions[i]);
-            }
+            AskQuestion(Questions[QuestionsCurrentListIndex], QuestionsCurrentListIndex);
         }
 
 
 
-        private void AskQuestion(VraagClass Question)
+        private void AskQuestion(VraagClass Question, int QIndex)
         {
             TijdVanBeantwoorden = 0;
             VraagLable.Text = Question.vraag;
@@ -66,40 +65,30 @@ namespace QuizApplicatie
 
             QuestionIndividualTimer = defaultQuestionIndividualTimer;
 
-            // Random selecteren van correct antwoord positie A of B
-            Random rnd = new Random();
-            int Dice = rnd.Next(1, 2);
+            ResetColors();
 
-            if (Dice == 1)
+            // Random selecteren van correct antwoord positie A of B
+            var random = new Random();
+            var randomBool = random.Next(2) == 1;
+
+            if (randomBool == true)
             {
                 CorrectAnswer = "A";
                 AnswerA.Text = Question.correctantwoord;
                 AnswerB.Text = Question.incorrectantwoord;
             }
-            else if (Dice == 2)
+            else
             {
                 CorrectAnswer = "B";
                 AnswerA.Text = Question.incorrectantwoord;
                 AnswerB.Text = Question.correctantwoord;
             }
 
+            Questions.RemoveAt(QIndex);
 
+            QuestionsCurrentListIndex = GetRandomQuestionListId();
 
-
-
-            while (HasGivenInput == true)
-            {
-                if (GivenInput == CorrectAnswer)
-                {
-                    VraagLable.Text = "GOED ANTWOORD !";
-                } else
-                {
-                    VraagLable.Text = "FOUT ANTWOORD CLOWIE!!!!";
-                }
-            }
-
-
-            QuestionIndividualTimer = 90;
+            QuestionIndividualTimer = defaultQuestionIndividualTimer;
             TimerPlaying = true;
             AcceptingInput = true;
         }
@@ -146,6 +135,19 @@ namespace QuizApplicatie
             return SortedQuestions;
         }
 
+        private int GetRandomQuestionListId()
+        {
+            int Rid = 0;
+
+            if (Questions.Count > 0)
+            {
+                Random rnd = new Random();
+                Rid = rnd.Next(0, Questions.Count - 1);
+            }
+
+            return Rid;
+        }
+
         private List<int> NewNumber(int Amount, int Start, int End)
         {
 
@@ -180,6 +182,20 @@ namespace QuizApplicatie
                 Close();
             }
 
+        }
+        private void ResetColors()
+        {
+            AnswerA.BackColor = Color.FromArgb(41, 76, 146);
+            ALetter.BackColor = Color.FromArgb(41, 76, 146);
+
+            AnswerB.BackColor = Color.FromArgb(41, 76, 146);
+            BLetter.BackColor = Color.FromArgb(41, 76, 146);
+
+            AnswerA.ForeColor = Color.White;
+            AnswerB.ForeColor = Color.White;
+
+            ALetter.ForeColor = Color.White;
+            BLetter.ForeColor = Color.White;
         }
 
         private void GlobalTimer_Tick(object sender, EventArgs e)
@@ -401,14 +417,22 @@ namespace QuizApplicatie
                 if (AftelNaarVolgende > 0)
                 {
                     AftelNaarVolgende--;
-                    BLetter.Text = AftelNaarVolgende.ToString();
+                    //BLetter.Text = AftelNaarVolgende.ToString();
                 }
 
                 if (AftelNaarVolgende == 0)
                 {
                     IsCountingDown = false;
+                    //ALetter.Text = "L";
 
-                    ALetter.Text = "L";
+                    if (Questions.Count > 0)
+                    {
+                        AskQuestion(Questions[QuestionsCurrentListIndex], QuestionsCurrentListIndex);
+                    } else
+                    {
+                        // RESULTATEN SCHERM
+                        VraagLable.Text = "NU RESULATATEN SCHERM";
+                    }
                 }
             }
         }
