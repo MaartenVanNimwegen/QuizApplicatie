@@ -430,5 +430,21 @@ namespace QuizApplicatie
                 }
             }
         }
+        
+        private void ResultatenschermOpenen(int userId, )
+        {
+            string query = "SELECT andwoord.userId, SUM(andwoord.tijd) AS Tijd, SUM(andwoord.strafTijd) AS StrafTijd,SUM(andwoord.tijd+andwoord.strafTijd) AS TotaalScore FROM andwoord INNER JOIN speler ON andwoord.userId = speler.id GROUP BY andwoord.userId, speler.naam";
+
+            using (MySqlConnection connection = new MySqlConnection())
+            {
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+                    connection.Close();
+                }
+            }
+        }
     }
 }
