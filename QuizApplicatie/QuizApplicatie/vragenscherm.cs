@@ -68,16 +68,16 @@ namespace QuizApplicatie
             ResetColors();
 
             // Random selecteren van correct antwoord positie A of B
-            Random rnd = new Random();
-            int Dice = rnd.Next(1, 2);
+            var random = new Random();
+            var randomBool = random.Next(2) == 1;
 
-            if (Dice == 1)
+            if (randomBool == true)
             {
                 CorrectAnswer = "A";
                 AnswerA.Text = Question.correctantwoord;
                 AnswerB.Text = Question.incorrectantwoord;
             }
-            else if (Dice == 2)
+            else
             {
                 CorrectAnswer = "B";
                 AnswerA.Text = Question.incorrectantwoord;
@@ -137,8 +137,13 @@ namespace QuizApplicatie
 
         private int GetRandomQuestionListId()
         {
-            Random rnd = new Random();
-            int Rid = rnd.Next(0, Questions.Count - 1);
+            int Rid = 0;
+
+            if (Questions.Count > 0)
+            {
+                Random rnd = new Random();
+                Rid = rnd.Next(0, Questions.Count - 1);
+            }
 
             return Rid;
         }
@@ -426,6 +431,7 @@ namespace QuizApplicatie
                     } else
                     {
                         // RESULTATEN SCHERM
+                        VraagLable.Text = "NU RESULATATEN SCHERM";
                     }
                 }
             }
