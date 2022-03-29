@@ -50,5 +50,11 @@ namespace QuizApplicatie
         {
             Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Resultaten myForm = new Resultaten();
+            myForm.ShowDialog();
+        }
     }
 }
