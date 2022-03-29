@@ -23,6 +23,7 @@ namespace QuizApplicatie
         bool AcceptingInput = false;
         VraagClass currentquestion;
         int TijdVanBeantwoorden = 0;
+        int AftelNaarVolgende = 0;
 
         int strafTijdFouteVraag = 10;
 
@@ -134,7 +135,11 @@ namespace QuizApplicatie
 
             return randomList;
         }
-
+        /// <summary>
+        /// Terug naar het hoofdmenu met checkup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BackBtn_Click(object sender, EventArgs e)
         {
             string message = "Weet je zeker dat je de quiz wilt beëindigen? Je scores zullen verloren raken.";
@@ -178,7 +183,11 @@ namespace QuizApplicatie
         public static bool antwoord = true;
         public static int strafTijd = 0;
         public static int tijd = 0;
-
+        /// <summary>
+        /// Bij keypress wordt de naam opgehaald hier word het antwoord geregistreerd en met de juiste score opgeslagen.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void VragenScherm_KeyDown(object sender, KeyEventArgs e)
         {
             //
@@ -205,8 +214,6 @@ namespace QuizApplicatie
             // Score opslaan vars
             int vraagId = currentquestion.id;
             bool antwoord = true;
-            int tijd = 0;
-            int strafTijd = 0;
             int BeantwoordTijd = TijdVanBeantwoorden;
 
             if (AcceptingInput)
@@ -265,9 +272,24 @@ namespace QuizApplicatie
                         AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, strafTijdFouteVraag);
                     }
                 }
-
+                AftelTimerVolgendeVraagF();
             }
         }
+        private void AftelTimerVolgendeVraagF()
+        {
+            if (HasGivenInput == true)
+            {
+                AftelNaarVolgende++;
+                            }
+        }
+        /// <summary>
+        /// Deze functie slaat de behaalde score op met de gegeven parameters
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="vraagId"></param>
+        /// <param name="antwoord"></param>
+        /// <param name="tijd"></param>
+        /// <param name="strafTijd"></param>
         private void AntwoordOpslaan(int userId, int vraagId, bool antwoord, int tijd, int strafTijd)
         {
             int AntwoordOpVraag = 0;
@@ -294,7 +316,11 @@ namespace QuizApplicatie
                 }
             }
         }
-
+        /// <summary>
+        /// Timer die per vraag bijhoud hoelang je erover gedaan hebt.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TijdVanAntwoorden_Tick(object sender, EventArgs e)
         {
             if(AcceptingInput == true)

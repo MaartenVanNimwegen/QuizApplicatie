@@ -18,6 +18,9 @@ namespace QuizApplicatie
             InitializeComponent();
             RefreshAntwoordGrid();
         }
+        /// <summary>
+        /// Maakt grid leeg en vult hem opnieuw met de informatie
+        /// </summary>
         private void RefreshAntwoordGrid()
         {
             AntwoordGrid.Rows.Clear();
@@ -60,6 +63,11 @@ namespace QuizApplicatie
                 }
             }
         }
+        /// <summary>
+        /// sluit het scherm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BackBtn_Click_1(object sender, EventArgs e)
         {
             Close();
