@@ -185,6 +185,33 @@ namespace QuizApplicatie
             }
         }
 
+        private void AntwoordOpslaan(int userId, int vraagId, bool antwoord, int tijd, int strafTijd)
+        {
+            int AntwoordOpVraag = 0;
+            if (antwoord == true)
+            {
+                AntwoordOpVraag = 1;
+            }
+            else
+            {
+                AntwoordOpVraag = 0;
+            }
+
+            string query = "INSERT INTO andwoord (userId, vraagId, tijd, strafTijd, IsGoedBeandwoord, datum) VALUES ('" + userId + "', '" + vraagId + "', '" + tijd + "', '" + strafTijd + "', '" + AntwoordOpVraag + "', now())";
+
+
+            using (MySqlConnection connection = new MySqlConnection())
+            {
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+                    connection.Close();
+                    Close();
+                }
+            }
+        }
         private void VragenScherm_KeyDown(object sender, KeyEventArgs e)
         {
             if (AcceptingInput)
@@ -248,12 +275,9 @@ namespace QuizApplicatie
                         CorrectInput = false;
                     }
                 }
+
             }
         }
 
-        private void AnswerA_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
