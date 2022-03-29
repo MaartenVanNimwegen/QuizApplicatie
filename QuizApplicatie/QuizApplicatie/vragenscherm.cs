@@ -24,7 +24,11 @@ namespace QuizApplicatie
         bool AcceptingInput = false;
         VraagClass currentquestion;
         int TijdVanBeantwoorden = 0;
-        int AftelNaarVolgende = 0;
+        int defaultAftelNaarVolgende = 3;
+        int AftelNaarVolgende = 3;
+        
+        bool IsCountingDown = false;
+
 
         int strafTijdFouteVraag = 10;
 
@@ -41,6 +45,8 @@ namespace QuizApplicatie
 
             GlobalTimeLabel.Text = TimerStart.ToString() + "s";
             QuestionTimeLabel.Text = TimerStart.ToString() + "s";
+
+            AftelNaarVolgende = defaultAftelNaarVolgende;
 
             for (int i = 0; i <= QuestionAmount - 1; i++)
             {
@@ -275,12 +281,16 @@ namespace QuizApplicatie
                     if (CorrectAnswer == "A")
                     {
                         CorrectInput = true;
+                        AftelNaarVolgende = defaultAftelNaarVolgende;
+                        IsCountingDown = true;
                         antwoord = true;
                         AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, 0);
                     }
                     else
                     {
                         CorrectInput = false;
+                        AftelNaarVolgende = defaultAftelNaarVolgende;
+                        IsCountingDown = true;
                         antwoord = false;
                         AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, strafTijdFouteVraag);
 
@@ -296,25 +306,21 @@ namespace QuizApplicatie
                     if (CorrectAnswer == "B")
                     {
                         CorrectInput = true;
+                        AftelNaarVolgende = defaultAftelNaarVolgende;
+                        IsCountingDown = true;
                         antwoord = true;
                         AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, 0);
                     }
                     else
                     {
                         CorrectInput = false;
+                        AftelNaarVolgende = defaultAftelNaarVolgende;
+                        IsCountingDown = true;
                         antwoord = false;
                         AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, strafTijdFouteVraag);
                     }
                 }
-                AftelTimerVolgendeVraagF();
             }
-        }
-        private void AftelTimerVolgendeVraagF()
-        {
-            if (HasGivenInput == true)
-            {
-                AftelNaarVolgende++;
-                            }
         }
         /// <summary>
         /// Deze functie slaat de behaalde score op met de gegeven parameters
@@ -363,5 +369,21 @@ namespace QuizApplicatie
             }
         }
 
+        private void AftelTimerVolgendeVraag_Tick(object sender, EventArgs e)
+        {
+            if (HasGivenInput == true && IsCountingDown == true)
+            {
+                if (AftelNaarVolgende > 0)
+                {
+                    AftelNaarVolgende--;
+                }
+
+                if (AftelNaarVolgende == 0)
+                {
+                    IsCountingDown = false;
+                    // volgende vraag
+                }
+            }
+        }
     }
 }

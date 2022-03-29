@@ -17,6 +17,11 @@ namespace QuizApplicatie
             InitializeComponent();
         }
 
-        
+        private void TerugNaarHoofdmenu_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void 
     }
 }

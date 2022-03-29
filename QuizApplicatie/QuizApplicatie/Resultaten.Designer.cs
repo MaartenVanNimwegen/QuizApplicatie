@@ -141,6 +141,7 @@ namespace QuizApplicatie
             this.TerugNaarHoofdmenu.TabIndex = 17;
             this.TerugNaarHoofdmenu.Text = "Terug naar hoofdmenu";
             this.TerugNaarHoofdmenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TerugNaarHoofdmenu.Click += new System.EventHandler(this.TerugNaarHoofdmenu_Click);
             // 
             // Resultaten
             // 
@@ -157,8 +158,11 @@ namespace QuizApplicatie
             this.Controls.Add(this.bg);
             this.Controls.Add(this.ResultatenLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Resultaten";
             this.Text = "Resultaten";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
