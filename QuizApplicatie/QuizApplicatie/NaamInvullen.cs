@@ -14,7 +14,6 @@ namespace QuizApplicatie
     public partial class NaamInvullen : Form
     {
         public static string naam = "";
-        int userId = 10;
         int QuizIsCustom = 0;
 
 

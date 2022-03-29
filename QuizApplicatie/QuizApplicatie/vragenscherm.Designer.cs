@@ -289,6 +289,7 @@ namespace QuizApplicatie
             // 
             this.AftelTimerVolgendeVraag.Enabled = true;
             this.AftelTimerVolgendeVraag.Interval = 1000;
+            this.AftelTimerVolgendeVraag.Tick += new System.EventHandler(this.AftelTimerVolgendeVraag_Tick);
             // 
             // VragenScherm
             // 
