@@ -58,7 +58,7 @@ namespace QuizApplicatie
             QuickplayBtn.Location = new System.Drawing.Point(43, 22);
             QuickplayBtn.Margin = new System.Windows.Forms.Padding(2);
             QuickplayBtn.Name = "QuickplayBtn";
-            QuickplayBtn.Size = new System.Drawing.Size(1776, 138);
+            QuickplayBtn.Size = new System.Drawing.Size(1786, 138);
             QuickplayBtn.TabIndex = 0;
             QuickplayBtn.TabStop = false;
             QuickplayBtn.Text = "Quickplay";
@@ -78,7 +78,7 @@ namespace QuizApplicatie
             CustomQuizBtn.Location = new System.Drawing.Point(43, 172);
             CustomQuizBtn.Margin = new System.Windows.Forms.Padding(2);
             CustomQuizBtn.Name = "CustomQuizBtn";
-            CustomQuizBtn.Size = new System.Drawing.Size(1776, 138);
+            CustomQuizBtn.Size = new System.Drawing.Size(1786, 138);
             CustomQuizBtn.TabIndex = 2;
             CustomQuizBtn.TabStop = false;
             CustomQuizBtn.Text = "Custom quiz";
@@ -98,7 +98,7 @@ namespace QuizApplicatie
             VragenbeheerBtn.Location = new System.Drawing.Point(43, 321);
             VragenbeheerBtn.Margin = new System.Windows.Forms.Padding(2);
             VragenbeheerBtn.Name = "VragenbeheerBtn";
-            VragenbeheerBtn.Size = new System.Drawing.Size(1776, 138);
+            VragenbeheerBtn.Size = new System.Drawing.Size(1786, 138);
             VragenbeheerBtn.TabIndex = 3;
             VragenbeheerBtn.TabStop = false;
             VragenbeheerBtn.Text = "Vragenbeheer";
@@ -118,7 +118,7 @@ namespace QuizApplicatie
             ScoresBtn.Location = new System.Drawing.Point(43, 470);
             ScoresBtn.Margin = new System.Windows.Forms.Padding(2);
             ScoresBtn.Name = "ScoresBtn";
-            ScoresBtn.Size = new System.Drawing.Size(1776, 138);
+            ScoresBtn.Size = new System.Drawing.Size(1786, 138);
             ScoresBtn.TabIndex = 4;
             ScoresBtn.TabStop = false;
             ScoresBtn.Text = "Scores";
@@ -138,7 +138,7 @@ namespace QuizApplicatie
             this.panel1.Location = new System.Drawing.Point(20, 163);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1868, 892);
+            this.panel1.Size = new System.Drawing.Size(1878, 930);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -153,7 +153,7 @@ namespace QuizApplicatie
             this.VraagLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.VraagLable.Name = "VraagLable";
             this.VraagLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.VraagLable.Size = new System.Drawing.Size(1879, 119);
+            this.VraagLable.Size = new System.Drawing.Size(1887, 95);
             this.VraagLable.TabIndex = 9;
             this.VraagLable.Text = "Quiz applicatie";
             this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,7 +177,7 @@ namespace QuizApplicatie
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(2400, 1350);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.VraagLable);
             this.Controls.Add(this.panel1);
