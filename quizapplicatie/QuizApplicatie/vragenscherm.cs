@@ -14,6 +14,20 @@ namespace QuizApplicatie
     public partial class VragenScherm : Form
     {
         List<VraagClass> Vragen = new List<VraagClass>();
+
+        // vars voor passtrough
+        private int userId;
+        private int TotaalVragen = QuestionAmount;
+        public int IsGoedBeantwoord;
+        public int AantalFouteVragen;
+        public int StrafTijd = 0;
+        public int Tijd = 0;
+
+        public string naam = NaamInvullen.naam;
+        public int id = 0;
+        public int vraagId = 0;
+        public bool antwoord = true;
+
         bool HasGivenInput = false;
         bool TimerPlaying = false;
         int GlobalTimer = 0;
@@ -37,7 +51,7 @@ namespace QuizApplicatie
 
 
         // SETTINGS
-        int QuestionAmount = 5;
+        public static int QuestionAmount = 5;
         int TimerStart = 0;
 
         public VragenScherm()
@@ -241,14 +255,6 @@ namespace QuizApplicatie
                 AntwoordOpslaan(id, vraagId, antwoord, defaultQuestionIndividualTimer, strafTijdFouteVraag);
             }
         }
-
-        // Score opslaan vars
-        public static string naam = NaamInvullen.naam;
-        public static int id = 0;
-        public static int vraagId = 0;
-        public static bool antwoord = true;
-        public static int strafTijd = 0;
-        public static int tijd = 0;
         /// <summary>
         /// Bij keypress wordt de naam opgehaald hier word het antwoord geregistreerd en met de juiste score opgeslagen.
         /// </summary>
@@ -410,6 +416,57 @@ namespace QuizApplicatie
             }
         }
 
+        //
+        public void CheckAantalVragen()
+        {
+            string query = "SELECT id FROM speler WHERE naam = '" + naam + "'";
+
+            using (MySqlConnection connection = new MySqlConnection())
+            {
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            userId = (int)reader["id"];
+                        }
+                    }
+                    reader.Close();
+                    connection.Close();
+                }
+            }
+
+            string query2 = "SELECT sum(IsGoedBeandwoord) AS IsGoedBeandwoord FROM andwoord WHERE userId = " + userId + "";
+
+            using (MySqlConnection connection = new MySqlConnection())
+            {
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
+                using (MySqlCommand command2 = new MySqlCommand(query2, connection))
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command2.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            //IsGoedBeantwoord = (int)reader["IsGoedBeandwoord"];
+                            IsGoedBeantwoord = 2;
+
+                        }
+                    }
+                    connection.Close();
+                    AantalFouteVragen = QuestionAmount - IsGoedBeantwoord;
+                }
+            }
+        }
+        //
+
+        
+        
         private void AftelTimerVolgendeVraag_Tick(object sender, EventArgs e)
         {
             if (HasGivenInput == true && IsCountingDown == true)
@@ -430,8 +487,10 @@ namespace QuizApplicatie
                         AskQuestion(Questions[QuestionsCurrentListIndex], QuestionsCurrentListIndex);
                     } else
                     {
-                        // RESULTATEN SCHERM
-                        VraagLable.Text = "NU RESULATATEN SCHERM";
+                        CheckAantalVragen();
+                        Resultaten myForm = new Resultaten(IsGoedBeantwoord, AantalFouteVragen, AantalFouteVragen * strafTijdFouteVraag, GlobalTimer);
+                        myForm.ShowDialog();
+                        Close();
                     }
                 }
             }
