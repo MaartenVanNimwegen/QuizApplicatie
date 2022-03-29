@@ -17,7 +17,8 @@ namespace QuizApplicatie
         bool HasGivenInput = false;
         bool TimerPlaying = false;
         int GlobalTimer = 0;
-        int QuestionIndividualTimer = 0;
+        int defaultQuestionIndividualTimer = 10;
+        int QuestionIndividualTimer = 10;
         bool CorrectInput;
         string CorrectAnswer = "";
         string GivenInput = "";
@@ -47,6 +48,7 @@ namespace QuizApplicatie
             QuestionTimeLabel.Text = TimerStart.ToString() + "s";
 
             AftelNaarVolgende = defaultAftelNaarVolgende;
+            QuestionIndividualTimer = defaultQuestionIndividualTimer;
 
             for (int i = 0; i <= QuestionAmount - 1; i++)
             {
@@ -61,6 +63,8 @@ namespace QuizApplicatie
             TijdVanBeantwoorden = 0;
             VraagLable.Text = Question.vraag;
             currentquestion = Question;
+
+            QuestionIndividualTimer = defaultQuestionIndividualTimer;
 
             // Random selecteren van correct antwoord positie A of B
             Random rnd = new Random();
@@ -193,11 +197,32 @@ namespace QuizApplicatie
             }
             else if (QuestionIndividualTimer <= 0)
             {
+                // De speler heeft niks beantwoord binnen de tijd
+
                 AcceptingInput = false;
                 TimerPlaying = false;
                 CorrectInput = false;
+                HasGivenInput = true;
 
-                // Wrong answer procedure
+                if (CorrectAnswer == "A")
+                {
+                    AnswerA.BackColor = Color.FromArgb(61, 196, 45);
+                    ALetter.BackColor = Color.FromArgb(61, 196, 45);
+
+                    AnswerB.BackColor = Color.FromArgb(242, 57, 24);
+                    BLetter.BackColor = Color.FromArgb(242, 57, 24);
+                }
+                else
+                {
+                    AnswerA.BackColor = Color.FromArgb(242, 57, 24);
+                    ALetter.BackColor = Color.FromArgb(242, 57, 24);
+
+                    AnswerB.BackColor = Color.FromArgb(61, 196, 45);
+                    BLetter.BackColor = Color.FromArgb(61, 196, 45);
+                }
+
+                antwoord = false;
+                AntwoordOpslaan(id, vraagId, antwoord, defaultQuestionIndividualTimer, strafTijdFouteVraag);
             }
         }
 
@@ -376,12 +401,14 @@ namespace QuizApplicatie
                 if (AftelNaarVolgende > 0)
                 {
                     AftelNaarVolgende--;
+                    BLetter.Text = AftelNaarVolgende.ToString();
                 }
 
                 if (AftelNaarVolgende == 0)
                 {
                     IsCountingDown = false;
-                    // volgende vraag
+
+                    ALetter.Text = "L";
                 }
             }
         }
