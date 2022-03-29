@@ -32,12 +32,17 @@ namespace QuizApplicatie
 
         bool IsCountingDown = false;
 
+        Color IncorrectColor = Color.FromArgb(216, 34, 10);
+        Color CorrectColor = Color.FromArgb(54, 183, 47);
+        Color SelectedColor = Color.FromArgb(234, 228, 171);
+        Color DefaultColor = Color.FromArgb(41, 76, 146);
+
 
         int strafTijdFouteVraag = 10;
 
 
         // SETTINGS
-        int QuestionAmount = 5;
+        int QuestionAmount = 20;
         int TimerStart = 0;
 
         public VragenScherm()
@@ -68,16 +73,16 @@ namespace QuizApplicatie
             ResetColors();
 
             // Random selecteren van correct antwoord positie A of B
-            Random rnd = new Random();
-            int Dice = rnd.Next(1, 2);
+            var random = new Random();
+            var randomBool = random.Next(2) == 1;
 
-            if (Dice == 1)
+            if (randomBool == true)
             {
                 CorrectAnswer = "A";
                 AnswerA.Text = Question.correctantwoord;
                 AnswerB.Text = Question.incorrectantwoord;
             }
-            else if (Dice == 2)
+            else
             {
                 CorrectAnswer = "B";
                 AnswerA.Text = Question.incorrectantwoord;
@@ -137,9 +142,14 @@ namespace QuizApplicatie
 
         private int GetRandomQuestionListId()
         {
-            Random rnd = new Random();
-            int Rid = rnd.Next(0, Questions.Count - 1);
-            
+            int Rid = 0;
+
+            if (Questions.Count > 0)
+            {
+                Random rnd = new Random();
+                Rid = rnd.Next(0, Questions.Count - 1);
+            }
+
             return Rid;
         }
 
@@ -180,17 +190,20 @@ namespace QuizApplicatie
         }
         private void ResetColors()
         {
-            AnswerA.BackColor = Color.FromArgb(41, 76, 146);
-            ALetter.BackColor = Color.FromArgb(41, 76, 146);
+            AnswerA.BackColor = DefaultColor;
+            ALetter.BackColor = DefaultColor;
 
-            AnswerB.BackColor = Color.FromArgb(41, 76, 146);
-            BLetter.BackColor = Color.FromArgb(41, 76, 146);
+            AnswerB.BackColor = DefaultColor;
+            BLetter.BackColor = DefaultColor;
 
             AnswerA.ForeColor = Color.White;
             AnswerB.ForeColor = Color.White;
 
             ALetter.ForeColor = Color.White;
             BLetter.ForeColor = Color.White;
+
+            SelectedA.BackColor = DefaultColor;
+            SelectedB.BackColor = DefaultColor;
         }
 
         private void GlobalTimer_Tick(object sender, EventArgs e)
@@ -206,34 +219,62 @@ namespace QuizApplicatie
                 QuestionIndividualTimer--;
                 QuestionTimeLabel.Text = QuestionIndividualTimer.ToString() + "s";
             }
-            else if (QuestionIndividualTimer <= 0)
+            else if (QuestionIndividualTimer <= 0 && AcceptingInput == true)
             {
                 // De speler heeft niks beantwoord binnen de tijd
 
                 AcceptingInput = false;
-                TimerPlaying = false;
-                CorrectInput = false;
                 HasGivenInput = true;
+                TimerPlaying = false;
+
+                string query = "SELECT id FROM speler WHERE naam = '" + naam + "'";
+
+                using (MySqlConnection connection = new MySqlConnection())
+                {
+                    connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        MySqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                id = (int)reader["id"];
+                            }
+                        }
+                        reader.Close();
+
+                    }
+                }
+                // Score opslaan vars
+                int vraagId = currentquestion.id;
 
                 if (CorrectAnswer == "A")
                 {
-                    AnswerA.BackColor = Color.FromArgb(61, 196, 45);
-                    ALetter.BackColor = Color.FromArgb(61, 196, 45);
+                    AnswerA.BackColor = CorrectColor;
+                    ALetter.BackColor = CorrectColor;
+                    SelectedA.BackColor = CorrectColor;
 
-                    AnswerB.BackColor = Color.FromArgb(242, 57, 24);
-                    BLetter.BackColor = Color.FromArgb(242, 57, 24);
+                    AnswerB.BackColor = IncorrectColor;
+                    BLetter.BackColor = IncorrectColor;
+                    SelectedB.BackColor = IncorrectColor;
                 }
                 else
                 {
-                    AnswerA.BackColor = Color.FromArgb(242, 57, 24);
-                    ALetter.BackColor = Color.FromArgb(242, 57, 24);
+                    AnswerA.BackColor = IncorrectColor;
+                    ALetter.BackColor = IncorrectColor;
+                    SelectedA.BackColor = IncorrectColor;
 
-                    AnswerB.BackColor = Color.FromArgb(61, 196, 45);
-                    BLetter.BackColor = Color.FromArgb(61, 196, 45);
+                    AnswerB.BackColor = CorrectColor;
+                    BLetter.BackColor = CorrectColor;
+                    SelectedB.BackColor = CorrectColor;
                 }
 
-                antwoord = false;
-                AntwoordOpslaan(id, vraagId, antwoord, defaultQuestionIndividualTimer, strafTijdFouteVraag);
+                CorrectInput = false;
+                AftelNaarVolgende = defaultAftelNaarVolgende;
+                IsCountingDown = true;
+                AntwoordOpslaan(id, vraagId, false, defaultQuestionIndividualTimer, strafTijdFouteVraag);
             }
         }
 
@@ -288,34 +329,35 @@ namespace QuizApplicatie
 
                     if (CorrectAnswer == "A")
                     {
-                        AnswerA.BackColor = Color.FromArgb(61, 196, 45);
-                        ALetter.BackColor = Color.FromArgb(61, 196, 45);
+                        AnswerA.BackColor = CorrectColor;
+                        ALetter.BackColor = CorrectColor;
 
-                        AnswerB.BackColor = Color.FromArgb(242, 57, 24);
-                        BLetter.BackColor = Color.FromArgb(242, 57, 24);
+                        AnswerB.BackColor = IncorrectColor;
+                        BLetter.BackColor = IncorrectColor;
                     }
                     else
                     {
-                        AnswerA.BackColor = Color.FromArgb(242, 57, 24);
-                        ALetter.BackColor = Color.FromArgb(242, 57, 24);
+                        AnswerA.BackColor = IncorrectColor;
+                        ALetter.BackColor = IncorrectColor;
 
-                        AnswerB.BackColor = Color.FromArgb(61, 196, 45);
-                        BLetter.BackColor = Color.FromArgb(61, 196, 45);
+                        AnswerB.BackColor = CorrectColor;
+                        BLetter.BackColor = CorrectColor;
                     }
-                    AcceptingInput = false;
                 }
 
 
                 if (e.KeyCode == Keys.A)
                 {
-                    HasGivenInput = true;
                     GivenInput = "A";
 
-                    AnswerA.ForeColor = Color.Yellow;
-                    ALetter.ForeColor = Color.Yellow;
+                    AnswerA.ForeColor = SelectedColor;
+                    ALetter.ForeColor = SelectedColor;
+                    SelectedA.BackColor = SelectedColor;
 
                     if (CorrectAnswer == "A")
                     {
+                        SelectedB.BackColor = IncorrectColor;
+
                         CorrectInput = true;
                         AftelNaarVolgende = defaultAftelNaarVolgende;
                         IsCountingDown = true;
@@ -324,6 +366,8 @@ namespace QuizApplicatie
                     }
                     else
                     {
+                        SelectedB.BackColor = CorrectColor;
+
                         CorrectInput = false;
                         AftelNaarVolgende = defaultAftelNaarVolgende;
                         IsCountingDown = true;
@@ -337,10 +381,13 @@ namespace QuizApplicatie
                     HasGivenInput = true;
                     GivenInput = "B";
 
-                    AnswerB.ForeColor = Color.Yellow;
+                    AnswerB.ForeColor = SelectedColor;
+                    BLetter.ForeColor = SelectedColor;
+                    SelectedB.BackColor = SelectedColor;
 
                     if (CorrectAnswer == "B")
                     {
+                        SelectedA.BackColor = IncorrectColor;
                         CorrectInput = true;
                         AftelNaarVolgende = defaultAftelNaarVolgende;
                         IsCountingDown = true;
@@ -349,6 +396,7 @@ namespace QuizApplicatie
                     }
                     else
                     {
+                        SelectedA.BackColor = CorrectColor;
                         CorrectInput = false;
                         AftelNaarVolgende = defaultAftelNaarVolgende;
                         IsCountingDown = true;
@@ -412,13 +460,11 @@ namespace QuizApplicatie
                 if (AftelNaarVolgende > 0)
                 {
                     AftelNaarVolgende--;
-                    //BLetter.Text = AftelNaarVolgende.ToString();
                 }
 
                 if (AftelNaarVolgende == 0)
                 {
                     IsCountingDown = false;
-                    //ALetter.Text = "L";
 
                     if (Questions.Count > 0)
                     {
@@ -426,6 +472,7 @@ namespace QuizApplicatie
                     } else
                     {
                         // RESULTATEN SCHERM
+                        VraagLable.Text = "NU RESULATATEN SCHERM";
                     }
                 }
             }

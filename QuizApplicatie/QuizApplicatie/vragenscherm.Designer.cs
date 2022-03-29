@@ -50,6 +50,8 @@ namespace QuizApplicatie
             this.GlobalCountUpTimer = new System.Windows.Forms.Timer(this.components);
             this.TijdVanAntwoorden = new System.Windows.Forms.Timer(this.components);
             this.AftelTimerVolgendeVraag = new System.Windows.Forms.Timer(this.components);
+            this.SelectedA = new System.Windows.Forms.Label();
+            this.SelectedB = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
@@ -189,6 +191,8 @@ namespace QuizApplicatie
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.panel2.Controls.Add(this.SelectedB);
+            this.panel2.Controls.Add(this.SelectedA);
             this.panel2.Controls.Add(this.AnswerB);
             this.panel2.Controls.Add(this.BLetter);
             this.panel2.Controls.Add(this.AnswerA);
@@ -291,6 +295,34 @@ namespace QuizApplicatie
             this.AftelTimerVolgendeVraag.Interval = 1000;
             this.AftelTimerVolgendeVraag.Tick += new System.EventHandler(this.AftelTimerVolgendeVraag_Tick);
             // 
+            // SelectedA
+            // 
+            this.SelectedA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SelectedA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
+            this.SelectedA.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectedA.ForeColor = System.Drawing.SystemColors.Control;
+            this.SelectedA.Location = new System.Drawing.Point(40, 120);
+            this.SelectedA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SelectedA.Name = "SelectedA";
+            this.SelectedA.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SelectedA.Size = new System.Drawing.Size(10, 247);
+            this.SelectedA.TabIndex = 11;
+            this.SelectedA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SelectedB
+            // 
+            this.SelectedB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SelectedB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
+            this.SelectedB.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectedB.ForeColor = System.Drawing.SystemColors.Control;
+            this.SelectedB.Location = new System.Drawing.Point(40, 519);
+            this.SelectedB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SelectedB.Name = "SelectedB";
+            this.SelectedB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SelectedB.Size = new System.Drawing.Size(10, 247);
+            this.SelectedB.TabIndex = 12;
+            this.SelectedB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // VragenScherm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,5 +369,7 @@ namespace QuizApplicatie
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer TijdVanAntwoorden;
         private System.Windows.Forms.Timer AftelTimerVolgendeVraag;
+        private System.Windows.Forms.Label SelectedB;
+        private System.Windows.Forms.Label SelectedA;
     }
 }
