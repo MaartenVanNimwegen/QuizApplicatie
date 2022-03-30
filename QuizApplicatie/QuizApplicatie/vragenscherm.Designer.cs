@@ -33,6 +33,7 @@ namespace QuizApplicatie
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VragenScherm));
             this.VraagLable = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ExtraSecondsLabel = new System.Windows.Forms.Label();
             this.GlobalTimeLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@ namespace QuizApplicatie
             this.GlobalCountUpTimer = new System.Windows.Forms.Timer(this.components);
             this.TijdVanAntwoorden = new System.Windows.Forms.Timer(this.components);
             this.AftelTimerVolgendeVraag = new System.Windows.Forms.Timer(this.components);
-            this.ExtraSecondsLabel = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -88,6 +88,19 @@ namespace QuizApplicatie
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(326, 1098);
             this.panel1.TabIndex = 4;
+            // 
+            // ExtraSecondsLabel
+            // 
+            this.ExtraSecondsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ExtraSecondsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExtraSecondsLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.ExtraSecondsLabel.Location = new System.Drawing.Point(234, 138);
+            this.ExtraSecondsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ExtraSecondsLabel.Name = "ExtraSecondsLabel";
+            this.ExtraSecondsLabel.Size = new System.Drawing.Size(86, 67);
+            this.ExtraSecondsLabel.TabIndex = 3;
+            this.ExtraSecondsLabel.Text = "0";
+            this.ExtraSecondsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // GlobalTimeLabel
             // 
@@ -283,19 +296,6 @@ namespace QuizApplicatie
             this.AftelTimerVolgendeVraag.Enabled = true;
             this.AftelTimerVolgendeVraag.Interval = 1000;
             this.AftelTimerVolgendeVraag.Tick += new System.EventHandler(this.AftelTimerVolgendeVraag_Tick);
-            // 
-            // ExtraSecondsLabel
-            // 
-            this.ExtraSecondsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ExtraSecondsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExtraSecondsLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.ExtraSecondsLabel.Location = new System.Drawing.Point(268, 138);
-            this.ExtraSecondsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ExtraSecondsLabel.Name = "ExtraSecondsLabel";
-            this.ExtraSecondsLabel.Size = new System.Drawing.Size(52, 67);
-            this.ExtraSecondsLabel.TabIndex = 3;
-            this.ExtraSecondsLabel.Text = "0";
-            this.ExtraSecondsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // progressBar
             // 
