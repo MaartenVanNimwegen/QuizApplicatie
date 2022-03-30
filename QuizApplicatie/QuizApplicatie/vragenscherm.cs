@@ -47,6 +47,7 @@ namespace QuizApplicatie
         int AantalVragenCustom;
         int secondenpervraag;
         int aantalstrafseconde;
+        int aantathuidigestrafseconde;
 
         bool IsCountingDown = false;
 
@@ -79,6 +80,7 @@ namespace QuizApplicatie
 
             GlobalTimeLabel.Text = TimerStart.ToString() + "s";
             QuestionTimeLabel.Text = TimerStart.ToString() + "s";
+            
 
             AftelNaarVolgende = defaultAftelNaarVolgende;
             QuestionIndividualTimer = defaultQuestionIndividualTimer;
@@ -555,6 +557,16 @@ namespace QuizApplicatie
                     }
                 }
             }
+        }
+        public void strafsecondeberekenen()
+        {
+            if(antwoord == false)
+            {
+                aantathuidigestrafseconde = int.Parse(ExtraSecondsLabel.Text);
+                aantathuidigestrafseconde + aantalstrafseconde;
+            }
+            
+
         }
     }
 }

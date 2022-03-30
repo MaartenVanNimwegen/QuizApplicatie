@@ -42,6 +42,8 @@ namespace QuizApplicatie
             this.QuestionTimeLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.SelectedB = new System.Windows.Forms.Label();
+            this.SelectedA = new System.Windows.Forms.Label();
             this.AnswerB = new System.Windows.Forms.Label();
             this.BLetter = new System.Windows.Forms.Label();
             this.AnswerA = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@ namespace QuizApplicatie
             this.GlobalCountUpTimer = new System.Windows.Forms.Timer(this.components);
             this.TijdVanAntwoorden = new System.Windows.Forms.Timer(this.components);
             this.AftelTimerVolgendeVraag = new System.Windows.Forms.Timer(this.components);
-            this.SelectedA = new System.Windows.Forms.Label();
-            this.SelectedB = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
@@ -149,7 +149,7 @@ namespace QuizApplicatie
             this.ExtraSecondsLabel.Name = "ExtraSecondsLabel";
             this.ExtraSecondsLabel.Size = new System.Drawing.Size(77, 67);
             this.ExtraSecondsLabel.TabIndex = 3;
-            this.ExtraSecondsLabel.Text = "0s";
+            this.ExtraSecondsLabel.Text = "0";
             this.ExtraSecondsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
@@ -202,6 +202,34 @@ namespace QuizApplicatie
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1508, 861);
             this.panel2.TabIndex = 5;
+            // 
+            // SelectedB
+            // 
+            this.SelectedB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SelectedB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
+            this.SelectedB.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectedB.ForeColor = System.Drawing.SystemColors.Control;
+            this.SelectedB.Location = new System.Drawing.Point(40, 519);
+            this.SelectedB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SelectedB.Name = "SelectedB";
+            this.SelectedB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SelectedB.Size = new System.Drawing.Size(10, 247);
+            this.SelectedB.TabIndex = 12;
+            this.SelectedB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SelectedA
+            // 
+            this.SelectedA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SelectedA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
+            this.SelectedA.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectedA.ForeColor = System.Drawing.SystemColors.Control;
+            this.SelectedA.Location = new System.Drawing.Point(40, 120);
+            this.SelectedA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SelectedA.Name = "SelectedA";
+            this.SelectedA.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SelectedA.Size = new System.Drawing.Size(10, 247);
+            this.SelectedA.TabIndex = 11;
+            this.SelectedA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AnswerB
             // 
@@ -294,34 +322,6 @@ namespace QuizApplicatie
             this.AftelTimerVolgendeVraag.Enabled = true;
             this.AftelTimerVolgendeVraag.Interval = 1000;
             this.AftelTimerVolgendeVraag.Tick += new System.EventHandler(this.AftelTimerVolgendeVraag_Tick);
-            // 
-            // SelectedA
-            // 
-            this.SelectedA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SelectedA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
-            this.SelectedA.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectedA.ForeColor = System.Drawing.SystemColors.Control;
-            this.SelectedA.Location = new System.Drawing.Point(40, 120);
-            this.SelectedA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SelectedA.Name = "SelectedA";
-            this.SelectedA.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SelectedA.Size = new System.Drawing.Size(10, 247);
-            this.SelectedA.TabIndex = 11;
-            this.SelectedA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SelectedB
-            // 
-            this.SelectedB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SelectedB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
-            this.SelectedB.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectedB.ForeColor = System.Drawing.SystemColors.Control;
-            this.SelectedB.Location = new System.Drawing.Point(40, 519);
-            this.SelectedB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SelectedB.Name = "SelectedB";
-            this.SelectedB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SelectedB.Size = new System.Drawing.Size(10, 247);
-            this.SelectedB.TabIndex = 12;
-            this.SelectedB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // VragenScherm
             // 
