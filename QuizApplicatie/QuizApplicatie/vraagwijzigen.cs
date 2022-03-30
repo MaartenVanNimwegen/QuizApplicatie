@@ -27,7 +27,7 @@ namespace QuizApplicatie
         {
             InitializeComponent();
 
-            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ");
+            MySqlConnection connection = new MySqlConnection(DatabaseSettings.Connectionstring);
             connection.Open();
             MySqlCommand cmd = new MySqlCommand("select * from vragen where id = " + questionId.ToString() , connection);
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -58,7 +58,7 @@ namespace QuizApplicatie
             }
             else
             {
-                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ");
+                MySqlConnection connection = new MySqlConnection(DatabaseSettings.Connectionstring);
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand("UPDATE vragen SET Vraag='" + Vraag + "', GoedAntwoord='" + GoedAntwoord + "', FoutAntwoord='" + FoutAntwoord + "' where id = " + questionId + "", connection);
                 cmd.ExecuteReader();

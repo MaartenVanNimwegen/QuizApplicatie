@@ -30,7 +30,7 @@ namespace QuizApplicatie
 
             using (MySqlConnection connection = new MySqlConnection())
             {
-                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
+                connection.ConnectionString = DatabaseSettings.Connectionstring;
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     connection.Open();

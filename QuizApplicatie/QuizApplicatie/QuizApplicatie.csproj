@@ -102,6 +102,7 @@
     <Compile Include="CustomQuiz.Designer.cs">
       <DependentUpon>CustomQuiz.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseSettings.cs" />
     <Compile Include="NaamInvullen.cs">
       <SubType>Form</SubType>
     </Compile>

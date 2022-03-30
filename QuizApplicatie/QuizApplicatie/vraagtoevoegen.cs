@@ -37,7 +37,7 @@ namespace QuizApplicatie
             }
             else
             {
-                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ");
+                MySqlConnection connection = new MySqlConnection(DatabaseSettings.Connectionstring);
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand("INSERT INTO `vragen` (`Vraag`, `GoedAntwoord`, `FoutAntwoord`) VALUES ( '" + Vraag + "', '" + GoedAntwoord + "', '" + FoutAntwoord + "');", connection);
                 cmd.ExecuteReader();

@@ -35,8 +35,6 @@ namespace QuizApplicatie
             this.panel1 = new System.Windows.Forms.Panel();
             this.GlobalTimeLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TotalScore = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.ExtraSecondsLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.QuestionTimeLabel = new System.Windows.Forms.Label();
@@ -80,8 +78,6 @@ namespace QuizApplicatie
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
             this.panel1.Controls.Add(this.GlobalTimeLabel);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.TotalScore);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.ExtraSecondsLabel);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.QuestionTimeLabel);
@@ -115,30 +111,6 @@ namespace QuizApplicatie
             this.label3.TabIndex = 6;
             this.label3.Text = "Totale tijd:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // TotalScore
-            // 
-            this.TotalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalScore.ForeColor = System.Drawing.SystemColors.Control;
-            this.TotalScore.Location = new System.Drawing.Point(211, 247);
-            this.TotalScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TotalScore.Name = "TotalScore";
-            this.TotalScore.Size = new System.Drawing.Size(111, 67);
-            this.TotalScore.TabIndex = 5;
-            this.TotalScore.Text = "0";
-            this.TotalScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(2, 247);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(229, 67);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Totale score:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ExtraSecondsLabel
             // 
@@ -355,8 +327,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label QuestionTimeLabel;
-        private System.Windows.Forms.Label TotalScore;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label ExtraSecondsLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label AnswerA;

@@ -34,7 +34,7 @@ namespace QuizApplicatie
 
             using (MySqlConnection connection = new MySqlConnection())
             {
-                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
+                connection.ConnectionString = DatabaseSettings.Connectionstring;
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
 
@@ -94,7 +94,7 @@ namespace QuizApplicatie
                 DialogResult dialogResult = MessageBox.Show("Weet je zeker dat je deze vraag wilt verwijderen?", "Artikel verwijderen", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ");
+                    MySqlConnection connection = new MySqlConnection(DatabaseSettings.Connectionstring);
                     connection.Open();
                     MySqlCommand cmd = new MySqlCommand("DELETE FROM vragen where id = " + questionId + "", connection);
                     cmd.ExecuteReader();
