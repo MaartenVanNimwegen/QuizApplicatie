@@ -8,6 +8,6 @@ namespace QuizApplicatie
 {
     class DatabaseSettings
     {
-        public static string Connectionstring = DatabaseSettings.Connectionstring;
+        public static string Connectionstring = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
     }
 }

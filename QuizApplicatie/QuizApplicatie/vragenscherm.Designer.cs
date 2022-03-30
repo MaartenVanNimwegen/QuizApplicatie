@@ -35,7 +35,6 @@ namespace QuizApplicatie
             this.panel1 = new System.Windows.Forms.Panel();
             this.GlobalTimeLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.ExtraSecondsLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.QuestionTimeLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@ namespace QuizApplicatie
             this.GlobalCountUpTimer = new System.Windows.Forms.Timer(this.components);
             this.TijdVanAntwoorden = new System.Windows.Forms.Timer(this.components);
             this.AftelTimerVolgendeVraag = new System.Windows.Forms.Timer(this.components);
+            this.ExtraSecondsLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
@@ -76,9 +76,9 @@ namespace QuizApplicatie
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.panel1.Controls.Add(this.ExtraSecondsLabel);
             this.panel1.Controls.Add(this.GlobalTimeLabel);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.ExtraSecondsLabel);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.QuestionTimeLabel);
             this.panel1.Controls.Add(this.label2);
@@ -92,60 +92,48 @@ namespace QuizApplicatie
             // 
             this.GlobalTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GlobalTimeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.GlobalTimeLabel.Location = new System.Drawing.Point(173, 90);
+            this.GlobalTimeLabel.Location = new System.Drawing.Point(227, 72);
             this.GlobalTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GlobalTimeLabel.Name = "GlobalTimeLabel";
-            this.GlobalTimeLabel.Size = new System.Drawing.Size(152, 67);
+            this.GlobalTimeLabel.Size = new System.Drawing.Size(94, 67);
             this.GlobalTimeLabel.TabIndex = 7;
-            this.GlobalTimeLabel.Text = "0s";
+            this.GlobalTimeLabel.Text = "0";
             this.GlobalTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(2, 90);
+            this.label3.Location = new System.Drawing.Point(1, 72);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 67);
+            this.label3.Size = new System.Drawing.Size(256, 67);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Totale tijd:";
+            this.label3.Text = "Gebruikte tijd:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ExtraSecondsLabel
-            // 
-            this.ExtraSecondsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExtraSecondsLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.ExtraSecondsLabel.Location = new System.Drawing.Point(244, 169);
-            this.ExtraSecondsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ExtraSecondsLabel.Name = "ExtraSecondsLabel";
-            this.ExtraSecondsLabel.Size = new System.Drawing.Size(77, 67);
-            this.ExtraSecondsLabel.TabIndex = 3;
-            this.ExtraSecondsLabel.Text = "0";
-            this.ExtraSecondsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(2, 169);
+            this.label4.Location = new System.Drawing.Point(1, 138);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(256, 67);
+            this.label4.Size = new System.Drawing.Size(255, 67);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Straf seconden:";
+            this.label4.Text = "Strafseconden:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // QuestionTimeLabel
             // 
             this.QuestionTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuestionTimeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.QuestionTimeLabel.Location = new System.Drawing.Point(205, 5);
+            this.QuestionTimeLabel.Location = new System.Drawing.Point(204, 5);
             this.QuestionTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.QuestionTimeLabel.Name = "QuestionTimeLabel";
             this.QuestionTimeLabel.Size = new System.Drawing.Size(120, 67);
             this.QuestionTimeLabel.TabIndex = 1;
-            this.QuestionTimeLabel.Text = "0s";
+            this.QuestionTimeLabel.Text = "0";
             this.QuestionTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
@@ -295,6 +283,19 @@ namespace QuizApplicatie
             this.AftelTimerVolgendeVraag.Interval = 1000;
             this.AftelTimerVolgendeVraag.Tick += new System.EventHandler(this.AftelTimerVolgendeVraag_Tick);
             // 
+            // ExtraSecondsLabel
+            // 
+            this.ExtraSecondsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ExtraSecondsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExtraSecondsLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.ExtraSecondsLabel.Location = new System.Drawing.Point(268, 138);
+            this.ExtraSecondsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ExtraSecondsLabel.Name = "ExtraSecondsLabel";
+            this.ExtraSecondsLabel.Size = new System.Drawing.Size(52, 67);
+            this.ExtraSecondsLabel.TabIndex = 3;
+            this.ExtraSecondsLabel.Text = "0";
+            this.ExtraSecondsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // VragenScherm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,7 +328,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label QuestionTimeLabel;
-        private System.Windows.Forms.Label ExtraSecondsLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label AnswerA;
         private System.Windows.Forms.Label ALetter;
@@ -341,5 +341,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.Timer AftelTimerVolgendeVraag;
         private System.Windows.Forms.Label SelectedB;
         private System.Windows.Forms.Label SelectedA;
+        private System.Windows.Forms.Label ExtraSecondsLabel;
     }
 }

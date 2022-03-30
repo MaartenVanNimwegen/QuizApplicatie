@@ -565,7 +565,7 @@ namespace QuizApplicatie
         {
             aantathuidigestrafseconde = int.Parse(ExtraSecondsLabel.Text);
             aantatstrafseconde = aantathuidigestrafseconde + aantalstrafseconde;
-            ExtraSecondsLabel.Text = aantatstrafseconde.ToString(); ;
+            ExtraSecondsLabel.Text = aantatstrafseconde.ToString();
         }
     }
 }
