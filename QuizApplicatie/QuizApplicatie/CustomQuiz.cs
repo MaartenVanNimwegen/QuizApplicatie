@@ -12,22 +12,32 @@ namespace QuizApplicatie
 {
     public partial class CustomQuiz : Form
     {
-        public CustomQuiz()
+        string Naam;
+        public CustomQuiz(string naam)
         {
             InitializeComponent();
+            Naam = naam;
         }
+        
+        int tijdPerVraag;
+        int strafseconde;
+        int aantalvragen;
+        bool QuizIsCustom;
 
-        private void TijdPerVraagAantal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AantalVragen_Click(object sender, EventArgs e)
-        {
-
-        }
         private void Backbtn_Click(object sender, EventArgs e)
         {
+            Close();
+        }
+
+        private void startcustomquiz_Click(object sender, EventArgs e)
+        {
+            tijdPerVraag = int.Parse(TijdPerVraagAantal.Text);
+            strafseconde = int.Parse(StrafsecondenAantal.Text);
+            aantalvragen = int.Parse(AantalVragenAantal.Text);
+            QuizIsCustom = true;
+
+            VragenScherm myForm = new VragenScherm(QuizIsCustom, tijdPerVraag, strafseconde, aantalvragen, Naam);
+            myForm.ShowDialog();
             Close();
         }
     }

@@ -42,7 +42,7 @@ namespace QuizApplicatie
                     }
                 }
 
-                VragenScherm myForm = new VragenScherm();
+                VragenScherm myForm = new VragenScherm(false, 10, 10, 10, naam);
                 myForm.ShowDialog();
             }
             else if (NaamVeld.Text.Length == 0)

@@ -40,7 +40,7 @@ namespace QuizApplicatie
             this.label2 = new System.Windows.Forms.Label();
             this.AantalVragenAantal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.startcustomquiz = new System.Windows.Forms.Label();
             this.BackBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +92,6 @@ namespace QuizApplicatie
             this.AantalVragen.TabIndex = 3;
             this.AantalVragen.Text = "Aantal vragen";
             this.AantalVragen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AantalVragen.Click += new System.EventHandler(this.AantalVragen_Click);
             // 
             // TijdPerVraagAantal
             // 
@@ -106,7 +105,6 @@ namespace QuizApplicatie
             this.TijdPerVraagAantal.TabIndex = 4;
             this.TijdPerVraagAantal.Text = "6";
             this.TijdPerVraagAantal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TijdPerVraagAantal.TextChanged += new System.EventHandler(this.TijdPerVraagAantal_TextChanged);
             // 
             // label1
             // 
@@ -158,17 +156,18 @@ namespace QuizApplicatie
             this.label3.Size = new System.Drawing.Size(240, 150);
             this.label3.TabIndex = 9;
             // 
-            // label4
+            // startcustomquiz
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1103, 287);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(700, 150);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Start quiz";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.startcustomquiz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
+            this.startcustomquiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
+            this.startcustomquiz.ForeColor = System.Drawing.Color.White;
+            this.startcustomquiz.Location = new System.Drawing.Point(1103, 287);
+            this.startcustomquiz.Name = "startcustomquiz";
+            this.startcustomquiz.Size = new System.Drawing.Size(700, 150);
+            this.startcustomquiz.TabIndex = 10;
+            this.startcustomquiz.Text = "Start quiz";
+            this.startcustomquiz.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.startcustomquiz.Click += new System.EventHandler(this.startcustomquiz_Click);
             // 
             // BackBtn
             // 
@@ -191,7 +190,7 @@ namespace QuizApplicatie
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.BackBtn);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.startcustomquiz);
             this.Controls.Add(this.AantalVragenAantal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.StrafsecondenAantal);
@@ -223,7 +222,7 @@ namespace QuizApplicatie
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox AantalVragenAantal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label startcustomquiz;
         private System.Windows.Forms.PictureBox BackBtn;
     }
 }

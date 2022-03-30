@@ -42,7 +42,7 @@ namespace QuizApplicatie
                     }
                 }
 
-                CustomQuiz myForm = new CustomQuiz();
+                CustomQuiz myForm = new CustomQuiz(naam);
                 myForm.ShowDialog();
             }
             else if (NaamVeldCustom.Text.Length == 0)

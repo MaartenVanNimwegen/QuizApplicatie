@@ -43,6 +43,11 @@ namespace QuizApplicatie
         int QuestionsCurrentListIndex = 0;
         List<VraagClass> Questions;
 
+        bool IsQuizCustom;
+        int AantalVragenCustom;
+        int secondenpervraag;
+        int aantalstrafseconde;
+
         bool IsCountingDown = false;
 
         Color IncorrectColor = Color.FromArgb(216, 34, 10);
@@ -58,8 +63,16 @@ namespace QuizApplicatie
         int QuestionAmount = 20;
         int TimerStart = 0;
 
-        public VragenScherm()
+        public VragenScherm(bool QuizIsCustom, int tijdPerVraag, int strafseconde, int aantalvragen, string Naam)
         {
+            IsQuizCustom = QuizIsCustom;
+            AantalVragenCustom = aantalvragen;
+            secondenpervraag = tijdPerVraag;
+            aantalstrafseconde = strafseconde;
+            naam = Naam;
+
+            CheckIfQuizIsCustom();
+
             Questions = GetQuestions(QuestionAmount);
 
             InitializeComponent();
@@ -73,7 +86,15 @@ namespace QuizApplicatie
             AskQuestion(Questions[QuestionsCurrentListIndex], QuestionsCurrentListIndex);
         }
 
-
+        private void CheckIfQuizIsCustom()
+        {
+            if(IsQuizCustom == true)
+            {
+                QuestionAmount = AantalVragenCustom;
+                defaultQuestionIndividualTimer = secondenpervraag;
+                strafTijdFouteVraag = aantalstrafseconde;
+            }
+        }
 
         private void AskQuestion(VraagClass Question, int QIndex)
         {
