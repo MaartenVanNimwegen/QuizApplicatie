@@ -50,6 +50,7 @@ namespace QuizApplicatie
             this.TijdVanAntwoorden = new System.Windows.Forms.Timer(this.components);
             this.AftelTimerVolgendeVraag = new System.Windows.Forms.Timer(this.components);
             this.ExtraSecondsLabel = new System.Windows.Forms.Label();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
@@ -296,12 +297,22 @@ namespace QuizApplicatie
             this.ExtraSecondsLabel.Text = "0";
             this.ExtraSecondsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // progressBar
+            // 
+            this.progressBar.BackColor = System.Drawing.Color.Yellow;
+            this.progressBar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.progressBar.Location = new System.Drawing.Point(57, 137);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(1846, 10);
+            this.progressBar.TabIndex = 13;
+            // 
             // VragenScherm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -342,5 +353,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.Label SelectedB;
         private System.Windows.Forms.Label SelectedA;
         private System.Windows.Forms.Label ExtraSecondsLabel;
+        public System.Windows.Forms.ProgressBar progressBar;
     }
 }
