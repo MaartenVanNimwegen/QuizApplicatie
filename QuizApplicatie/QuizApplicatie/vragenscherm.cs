@@ -67,16 +67,8 @@ namespace QuizApplicatie
         int QuestionAmount = 10;
         int TimerStart = 0;
 
-        public VragenScherm(bool QuizIsCustom, int tijdPerVraag, int strafseconde, int aantalvragen, string Naam)
+        public VragenScherm()
         {
-            IsQuizCustom = QuizIsCustom;
-            AantalVragenCustom = aantalvragen;
-            secondenpervraag = tijdPerVraag;
-            aantalstrafseconde = strafseconde;
-            naam = Naam;
-
-            CheckIfQuizIsCustom();
-
             Questions = GetQuestions(QuestionAmount);
 
             InitializeComponent();
@@ -100,6 +92,7 @@ namespace QuizApplicatie
                 strafTijdFouteVraag = aantalstrafseconde;
             }
         }
+
 
         private void AskQuestion(VraagClass Question, int QIndex)
         {
@@ -148,7 +141,7 @@ namespace QuizApplicatie
 
             using (MySqlConnection connection = new MySqlConnection())
             {
-                connection.ConnectionString = DatabaseSettings.Connectionstring;
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
 
@@ -272,7 +265,7 @@ namespace QuizApplicatie
 
                 using (MySqlConnection connection = new MySqlConnection())
                 {
-                    connection.ConnectionString = DatabaseSettings.Connectionstring;
+                    connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         connection.Open();
@@ -315,7 +308,6 @@ namespace QuizApplicatie
                 CorrectInput = false;
                 AftelNaarVolgende = defaultAftelNaarVolgende;
                 IsCountingDown = true;
-                strafsecondeberekenen();
                 AntwoordOpslaan(id, vraagId, false, defaultQuestionIndividualTimer, strafTijdFouteVraag);
             }
         }
@@ -331,7 +323,7 @@ namespace QuizApplicatie
 
             using (MySqlConnection connection = new MySqlConnection())
             {
-                connection.ConnectionString = DatabaseSettings.Connectionstring;
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     connection.Open();
@@ -470,7 +462,7 @@ namespace QuizApplicatie
 
             using (MySqlConnection connection = new MySqlConnection())
             {
-                connection.ConnectionString = DatabaseSettings.Connectionstring;
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     connection.Open();
@@ -499,7 +491,7 @@ namespace QuizApplicatie
 
             using (MySqlConnection connection = new MySqlConnection())
             {
-                connection.ConnectionString = DatabaseSettings.Connectionstring;
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     connection.Open();
@@ -520,7 +512,7 @@ namespace QuizApplicatie
 
             using (MySqlConnection connection = new MySqlConnection())
             {
-                connection.ConnectionString = DatabaseSettings.Connectionstring;
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
                 using (MySqlCommand command2 = new MySqlCommand(query2, connection))
                 {
                     connection.Open();
@@ -529,8 +521,8 @@ namespace QuizApplicatie
                     {
                         while (reader.Read())
                         {
-                            IsGoedBeantwoord = Convert.ToInt32(reader["IsGoedBeandwoord"]);
-                            //IsGoedBeantwoord = 2;
+                            //IsGoedBeantwoord = (int)reader["IsGoedBeandwoord"];
+                            IsGoedBeantwoord = 2;
 
                         }
                     }
@@ -569,11 +561,21 @@ namespace QuizApplicatie
                 }
             }
         }
-        public void strafsecondeberekenen()
+        
+        private void ResultatenschermOpenen(int userId, )
         {
-            aantathuidigestrafseconde = int.Parse(ExtraSecondsLabel.Text);
-            aantatstrafseconde = aantathuidigestrafseconde + aantalstrafseconde;
-            ExtraSecondsLabel.Text = aantatstrafseconde.ToString();
+            string query = "SELECT andwoord.userId, SUM(andwoord.tijd) AS Tijd, SUM(andwoord.strafTijd) AS StrafTijd,SUM(andwoord.tijd+andwoord.strafTijd) AS TotaalScore FROM andwoord INNER JOIN speler ON andwoord.userId = speler.id GROUP BY andwoord.userId, speler.naam";
+
+            using (MySqlConnection connection = new MySqlConnection())
+            {
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = quizapplicatie; User ID = root; Password = ";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+                    connection.Close();
+                }
+            }
         }
         public void progress()
         {
