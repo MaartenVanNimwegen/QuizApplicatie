@@ -43,6 +43,15 @@ namespace QuizApplicatie
         int QuestionsCurrentListIndex = 0;
         List<VraagClass> Questions;
 
+        bool IsQuizCustom;
+        int AantalVragenCustom;
+        int secondenpervraag;
+        int aantalstrafseconde;
+        int aantathuidigestrafseconde;
+        int aantatstrafseconde;
+
+        int VraagNummer = 0;
+
         bool IsCountingDown = false;
 
         Color IncorrectColor = Color.FromArgb(216, 34, 10);
@@ -55,7 +64,7 @@ namespace QuizApplicatie
 
 
         // SETTINGS
-        int QuestionAmount = 20;
+        int QuestionAmount = 10;
         int TimerStart = 0;
 
         public VragenScherm()
@@ -67,16 +76,28 @@ namespace QuizApplicatie
             GlobalTimeLabel.Text = TimerStart.ToString() + "s";
             QuestionTimeLabel.Text = TimerStart.ToString() + "s";
 
+
             AftelNaarVolgende = defaultAftelNaarVolgende;
             QuestionIndividualTimer = defaultQuestionIndividualTimer;
 
             AskQuestion(Questions[QuestionsCurrentListIndex], QuestionsCurrentListIndex);
         }
 
+        private void CheckIfQuizIsCustom()
+        {
+            if (IsQuizCustom == true)
+            {
+                QuestionAmount = AantalVragenCustom;
+                defaultQuestionIndividualTimer = secondenpervraag;
+                strafTijdFouteVraag = aantalstrafseconde;
+            }
+        }
 
 
         private void AskQuestion(VraagClass Question, int QIndex)
         {
+            VraagNummer++;
+
             TijdVanBeantwoorden = 0;
             VraagLable.Text = Question.vraag;
             currentquestion = Question;
@@ -368,6 +389,7 @@ namespace QuizApplicatie
                         IsCountingDown = true;
                         antwoord = true;
                         AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, 0);
+                        progress();
                     }
                     else
                     {
@@ -378,7 +400,8 @@ namespace QuizApplicatie
                         IsCountingDown = true;
                         antwoord = false;
                         AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, strafTijdFouteVraag);
-
+                        strafsecondeberekenen();
+                        progress();
                     }
                 }
                 else if (e.KeyCode == Keys.B)
@@ -398,6 +421,7 @@ namespace QuizApplicatie
                         IsCountingDown = true;
                         antwoord = true;
                         AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, 0);
+                        progress();
                     }
                     else
                     {
@@ -407,6 +431,8 @@ namespace QuizApplicatie
                         IsCountingDown = true;
                         antwoord = false;
                         AntwoordOpslaan(id, vraagId, antwoord, BeantwoordTijd, strafTijdFouteVraag);
+                        strafsecondeberekenen();
+                        progress();
                     }
                 }
             }
@@ -452,9 +478,9 @@ namespace QuizApplicatie
         /// <param name="e"></param>
         private void TijdVanAntwoorden_Tick(object sender, EventArgs e)
         {
-            if(AcceptingInput == true)
+            if (AcceptingInput == true)
             {
-                TijdVanBeantwoorden ++;
+                TijdVanBeantwoorden++;
             }
         }
 
@@ -507,8 +533,8 @@ namespace QuizApplicatie
         }
         //
 
-        
-        
+
+
         private void AftelTimerVolgendeVraag_Tick(object sender, EventArgs e)
         {
             if (HasGivenInput == true && IsCountingDown == true)
@@ -550,6 +576,13 @@ namespace QuizApplicatie
                     connection.Close();
                 }
             }
+        }
+        public void progress()
+        {
+            int Step = 100 / QuestionAmount;
+
+            progressBar.Step = Step;
+            progressBar.Value = Step * VraagNummer;
         }
     }
 }
