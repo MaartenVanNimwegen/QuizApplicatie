@@ -46,6 +46,7 @@ namespace QuizApplicatie
             this.VraagLable = new System.Windows.Forms.Label();
             this.CancelBtn = new System.Windows.Forms.PictureBox();
             this.AddQuestionBtn = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VragenGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CancelBtn)).BeginInit();
@@ -236,6 +237,19 @@ namespace QuizApplicatie
             this.AddQuestionBtn.TabStop = false;
             this.AddQuestionBtn.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(9, 127);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1888, 10);
+            this.label4.TabIndex = 67;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // VragenBeheer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +257,7 @@ namespace QuizApplicatie
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.ControlBox = false;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.AddQuestionBtn);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.VraagLable);
@@ -274,5 +289,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.DataGridViewTextBoxColumn caregorieArtikel;
         private System.Windows.Forms.DataGridViewImageColumn EditGridBtn;
         private System.Windows.Forms.DataGridViewImageColumn DeleteGridBtn;
+        private System.Windows.Forms.Label label4;
     }
 }

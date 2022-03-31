@@ -37,6 +37,7 @@ namespace QuizApplicatie
             this.panel1 = new System.Windows.Forms.Panel();
             this.VraagLable = new System.Windows.Forms.Label();
             this.BackBtn = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             QuickplayBtn = new System.Windows.Forms.Button();
             CustomQuizBtn = new System.Windows.Forms.Button();
             VragenbeheerBtn = new System.Windows.Forms.Button();
@@ -171,12 +172,26 @@ namespace QuizApplicatie
             this.BackBtn.TabStop = false;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(20, 104);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1888, 10);
+            this.label4.TabIndex = 50;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(1940, 1350);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.VraagLable);
             this.Controls.Add(this.panel1);
@@ -195,6 +210,7 @@ namespace QuizApplicatie
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label VraagLable;
         private System.Windows.Forms.PictureBox BackBtn;
+        private System.Windows.Forms.Label label4;
     }
 }
 

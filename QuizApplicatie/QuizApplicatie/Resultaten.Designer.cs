@@ -37,6 +37,7 @@ namespace QuizApplicatie
             this.TijdLabel = new System.Windows.Forms.Label();
             this.StrafSeconden = new System.Windows.Forms.Label();
             this.TerugNaarHoofdmenu = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ResultatenLabel
@@ -143,12 +144,26 @@ namespace QuizApplicatie
             this.TerugNaarHoofdmenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.TerugNaarHoofdmenu.Click += new System.EventHandler(this.TerugNaarHoofdmenu_Click);
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(11, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1881, 10);
+            this.label4.TabIndex = 50;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Resultaten
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.TerugNaarHoofdmenu);
             this.Controls.Add(this.StrafSeconden);
             this.Controls.Add(this.TijdLabel);
@@ -177,5 +192,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.Label TijdLabel;
         private System.Windows.Forms.Label StrafSeconden;
         private System.Windows.Forms.Label TerugNaarHoofdmenu;
+        private System.Windows.Forms.Label label4;
     }
 }

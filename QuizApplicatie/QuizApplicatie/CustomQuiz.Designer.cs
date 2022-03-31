@@ -42,6 +42,7 @@ namespace QuizApplicatie
             this.label3 = new System.Windows.Forms.Label();
             this.startcustomquiz = new System.Windows.Forms.Label();
             this.BackBtn = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BackBtn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,12 +184,24 @@ namespace QuizApplicatie
             this.BackBtn.TabStop = false;
             this.BackBtn.Click += new System.EventHandler(this.Backbtn_Click);
             // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(53, 152);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1813, 10);
+            this.label4.TabIndex = 49;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // CustomQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.startcustomquiz);
             this.Controls.Add(this.AantalVragenAantal);
@@ -224,5 +237,6 @@ namespace QuizApplicatie
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label startcustomquiz;
         private System.Windows.Forms.PictureBox BackBtn;
+        private System.Windows.Forms.Label label4;
     }
 }
