@@ -87,7 +87,7 @@ namespace QuizApplicatie
             this.TotaleScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.TotaleScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
             this.TotaleScore.ForeColor = System.Drawing.Color.White;
-            this.TotaleScore.Location = new System.Drawing.Point(1037, 494);
+            this.TotaleScore.Location = new System.Drawing.Point(1037, 713);
             this.TotaleScore.Name = "TotaleScore";
             this.TotaleScore.Size = new System.Drawing.Size(765, 150);
             this.TotaleScore.TabIndex = 13;
@@ -111,11 +111,11 @@ namespace QuizApplicatie
             this.TijdLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.TijdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
             this.TijdLabel.ForeColor = System.Drawing.Color.White;
-            this.TijdLabel.Location = new System.Drawing.Point(100, 713);
+            this.TijdLabel.Location = new System.Drawing.Point(1037, 279);
             this.TijdLabel.Name = "TijdLabel";
             this.TijdLabel.Size = new System.Drawing.Size(765, 150);
             this.TijdLabel.TabIndex = 15;
-            this.TijdLabel.Text = "Tijd: 0s";
+            this.TijdLabel.Text = "Gebruikte tijd: 0s";
             this.TijdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StrafSeconden
@@ -123,7 +123,7 @@ namespace QuizApplicatie
             this.StrafSeconden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.StrafSeconden.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
             this.StrafSeconden.ForeColor = System.Drawing.Color.White;
-            this.StrafSeconden.Location = new System.Drawing.Point(1037, 279);
+            this.StrafSeconden.Location = new System.Drawing.Point(1037, 494);
             this.StrafSeconden.Name = "StrafSeconden";
             this.StrafSeconden.Size = new System.Drawing.Size(765, 150);
             this.StrafSeconden.TabIndex = 16;
@@ -135,7 +135,7 @@ namespace QuizApplicatie
             this.TerugNaarHoofdmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.TerugNaarHoofdmenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
             this.TerugNaarHoofdmenu.ForeColor = System.Drawing.Color.White;
-            this.TerugNaarHoofdmenu.Location = new System.Drawing.Point(1037, 713);
+            this.TerugNaarHoofdmenu.Location = new System.Drawing.Point(100, 713);
             this.TerugNaarHoofdmenu.Name = "TerugNaarHoofdmenu";
             this.TerugNaarHoofdmenu.Size = new System.Drawing.Size(765, 150);
             this.TerugNaarHoofdmenu.TabIndex = 17;

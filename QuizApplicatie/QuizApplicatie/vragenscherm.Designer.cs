@@ -86,7 +86,7 @@ namespace QuizApplicatie
             this.panel1.Location = new System.Drawing.Point(1583, 182);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(326, 1098);
+            this.panel1.Size = new System.Drawing.Size(326, 861);
             this.panel1.TabIndex = 4;
             // 
             // ExtraSecondsLabel
@@ -299,6 +299,8 @@ namespace QuizApplicatie
             // 
             // progressBar
             // 
+            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar.BackColor = System.Drawing.Color.Yellow;
             this.progressBar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.progressBar.Location = new System.Drawing.Point(57, 137);

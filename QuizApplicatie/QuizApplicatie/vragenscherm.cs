@@ -317,6 +317,7 @@ namespace QuizApplicatie
                 IsCountingDown = true;
                 strafsecondeberekenen();
                 AntwoordOpslaan(id, vraagId, false, defaultQuestionIndividualTimer, strafTijdFouteVraag);
+                progress();
             }
         }
         /// <summary>
