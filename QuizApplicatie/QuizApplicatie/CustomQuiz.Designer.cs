@@ -103,7 +103,7 @@ namespace QuizApplicatie
             this.TijdPerVraagAantal.Name = "TijdPerVraagAantal";
             this.TijdPerVraagAantal.Size = new System.Drawing.Size(240, 56);
             this.TijdPerVraagAantal.TabIndex = 4;
-            this.TijdPerVraagAantal.Text = "6";
+            this.TijdPerVraagAantal.Text = "10";
             this.TijdPerVraagAantal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -124,7 +124,7 @@ namespace QuizApplicatie
             this.StrafsecondenAantal.Name = "StrafsecondenAantal";
             this.StrafsecondenAantal.Size = new System.Drawing.Size(240, 56);
             this.StrafsecondenAantal.TabIndex = 6;
-            this.StrafsecondenAantal.Text = "6";
+            this.StrafsecondenAantal.Text = "10";
             this.StrafsecondenAantal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -145,7 +145,7 @@ namespace QuizApplicatie
             this.AantalVragenAantal.Name = "AantalVragenAantal";
             this.AantalVragenAantal.Size = new System.Drawing.Size(240, 56);
             this.AantalVragenAantal.TabIndex = 8;
-            this.AantalVragenAantal.Text = "6";
+            this.AantalVragenAantal.Text = "10";
             this.AantalVragenAantal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
