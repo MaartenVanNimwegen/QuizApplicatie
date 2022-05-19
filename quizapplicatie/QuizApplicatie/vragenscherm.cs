@@ -90,7 +90,7 @@ namespace QuizApplicatie
 
             AskQuestion(Questions[QuestionsCurrentListIndex], QuestionsCurrentListIndex);
         }
-
+        
         private void CheckIfQuizIsCustom()
         {
             if (IsQuizCustom == true)
