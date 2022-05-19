@@ -63,11 +63,10 @@ namespace QuizApplicatie
             this.VraagLable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(93)))), ((int)(((byte)(171)))));
             this.VraagLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VraagLable.ForeColor = System.Drawing.SystemColors.Control;
-            this.VraagLable.Location = new System.Drawing.Point(57, 28);
-            this.VraagLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.VraagLable.Location = new System.Drawing.Point(86, 43);
             this.VraagLable.Name = "VraagLable";
             this.VraagLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.VraagLable.Size = new System.Drawing.Size(1847, 119);
+            this.VraagLable.Size = new System.Drawing.Size(2770, 183);
             this.VraagLable.TabIndex = 0;
             this.VraagLable.Text = "Vraag";
             this.VraagLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,10 +82,9 @@ namespace QuizApplicatie
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.QuestionTimeLabel);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(1583, 182);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(2374, 280);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(326, 861);
+            this.panel1.Size = new System.Drawing.Size(489, 1325);
             this.panel1.TabIndex = 4;
             // 
             // ExtraSecondsLabel
@@ -94,10 +92,9 @@ namespace QuizApplicatie
             this.ExtraSecondsLabel.BackColor = System.Drawing.Color.Transparent;
             this.ExtraSecondsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExtraSecondsLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.ExtraSecondsLabel.Location = new System.Drawing.Point(234, 138);
-            this.ExtraSecondsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ExtraSecondsLabel.Location = new System.Drawing.Point(351, 212);
             this.ExtraSecondsLabel.Name = "ExtraSecondsLabel";
-            this.ExtraSecondsLabel.Size = new System.Drawing.Size(86, 67);
+            this.ExtraSecondsLabel.Size = new System.Drawing.Size(129, 103);
             this.ExtraSecondsLabel.TabIndex = 3;
             this.ExtraSecondsLabel.Text = "0";
             this.ExtraSecondsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -106,10 +103,9 @@ namespace QuizApplicatie
             // 
             this.GlobalTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GlobalTimeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.GlobalTimeLabel.Location = new System.Drawing.Point(227, 72);
-            this.GlobalTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.GlobalTimeLabel.Location = new System.Drawing.Point(340, 111);
             this.GlobalTimeLabel.Name = "GlobalTimeLabel";
-            this.GlobalTimeLabel.Size = new System.Drawing.Size(94, 67);
+            this.GlobalTimeLabel.Size = new System.Drawing.Size(141, 103);
             this.GlobalTimeLabel.TabIndex = 7;
             this.GlobalTimeLabel.Text = "0";
             this.GlobalTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -118,10 +114,9 @@ namespace QuizApplicatie
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(1, 72);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(2, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(256, 67);
+            this.label3.Size = new System.Drawing.Size(384, 103);
             this.label3.TabIndex = 6;
             this.label3.Text = "Gebruikte tijd:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -130,10 +125,9 @@ namespace QuizApplicatie
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(1, 138);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(2, 212);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(255, 67);
+            this.label4.Size = new System.Drawing.Size(382, 103);
             this.label4.TabIndex = 2;
             this.label4.Text = "Strafseconden:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -142,10 +136,9 @@ namespace QuizApplicatie
             // 
             this.QuestionTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuestionTimeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.QuestionTimeLabel.Location = new System.Drawing.Point(204, 5);
-            this.QuestionTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.QuestionTimeLabel.Location = new System.Drawing.Point(306, 8);
             this.QuestionTimeLabel.Name = "QuestionTimeLabel";
-            this.QuestionTimeLabel.Size = new System.Drawing.Size(120, 67);
+            this.QuestionTimeLabel.Size = new System.Drawing.Size(180, 103);
             this.QuestionTimeLabel.TabIndex = 1;
             this.QuestionTimeLabel.Text = "0";
             this.QuestionTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -154,10 +147,9 @@ namespace QuizApplicatie
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(2, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(3, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 67);
+            this.label2.Size = new System.Drawing.Size(327, 103);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tijd voor deze vraag:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -171,10 +163,9 @@ namespace QuizApplicatie
             this.panel2.Controls.Add(this.BLetter);
             this.panel2.Controls.Add(this.AnswerA);
             this.panel2.Controls.Add(this.ALetter);
-            this.panel2.Location = new System.Drawing.Point(57, 182);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(86, 280);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1508, 861);
+            this.panel2.Size = new System.Drawing.Size(2262, 1325);
             this.panel2.TabIndex = 5;
             // 
             // SelectedB
@@ -183,11 +174,10 @@ namespace QuizApplicatie
             this.SelectedB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.SelectedB.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectedB.ForeColor = System.Drawing.SystemColors.Control;
-            this.SelectedB.Location = new System.Drawing.Point(40, 519);
-            this.SelectedB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SelectedB.Location = new System.Drawing.Point(60, 798);
             this.SelectedB.Name = "SelectedB";
             this.SelectedB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SelectedB.Size = new System.Drawing.Size(10, 247);
+            this.SelectedB.Size = new System.Drawing.Size(15, 380);
             this.SelectedB.TabIndex = 12;
             this.SelectedB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -197,11 +187,10 @@ namespace QuizApplicatie
             this.SelectedA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.SelectedA.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectedA.ForeColor = System.Drawing.SystemColors.Control;
-            this.SelectedA.Location = new System.Drawing.Point(40, 120);
-            this.SelectedA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SelectedA.Location = new System.Drawing.Point(60, 185);
             this.SelectedA.Name = "SelectedA";
             this.SelectedA.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SelectedA.Size = new System.Drawing.Size(10, 247);
+            this.SelectedA.Size = new System.Drawing.Size(15, 380);
             this.SelectedA.TabIndex = 11;
             this.SelectedA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -211,11 +200,10 @@ namespace QuizApplicatie
             this.AnswerB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.AnswerB.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnswerB.ForeColor = System.Drawing.SystemColors.Control;
-            this.AnswerB.Location = new System.Drawing.Point(275, 592);
-            this.AnswerB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AnswerB.Location = new System.Drawing.Point(412, 911);
             this.AnswerB.Name = "AnswerB";
             this.AnswerB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.AnswerB.Size = new System.Drawing.Size(1141, 150);
+            this.AnswerB.Size = new System.Drawing.Size(1712, 231);
             this.AnswerB.TabIndex = 10;
             this.AnswerB.Text = "Antwoord B";
             this.AnswerB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -226,11 +214,10 @@ namespace QuizApplicatie
             this.BLetter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.BLetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BLetter.ForeColor = System.Drawing.SystemColors.Control;
-            this.BLetter.Location = new System.Drawing.Point(40, 519);
-            this.BLetter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BLetter.Location = new System.Drawing.Point(60, 798);
             this.BLetter.Name = "BLetter";
             this.BLetter.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BLetter.Size = new System.Drawing.Size(264, 247);
+            this.BLetter.Size = new System.Drawing.Size(396, 380);
             this.BLetter.TabIndex = 9;
             this.BLetter.Text = "B";
             this.BLetter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -241,11 +228,10 @@ namespace QuizApplicatie
             this.AnswerA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.AnswerA.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnswerA.ForeColor = System.Drawing.Color.White;
-            this.AnswerA.Location = new System.Drawing.Point(293, 178);
-            this.AnswerA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AnswerA.Location = new System.Drawing.Point(440, 274);
             this.AnswerA.Name = "AnswerA";
             this.AnswerA.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.AnswerA.Size = new System.Drawing.Size(1141, 150);
+            this.AnswerA.Size = new System.Drawing.Size(1712, 231);
             this.AnswerA.TabIndex = 8;
             this.AnswerA.Text = "Antwoord A";
             this.AnswerA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -256,11 +242,10 @@ namespace QuizApplicatie
             this.ALetter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(76)))), ((int)(((byte)(146)))));
             this.ALetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ALetter.ForeColor = System.Drawing.SystemColors.Control;
-            this.ALetter.Location = new System.Drawing.Point(40, 120);
-            this.ALetter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ALetter.Location = new System.Drawing.Point(60, 185);
             this.ALetter.Name = "ALetter";
             this.ALetter.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ALetter.Size = new System.Drawing.Size(264, 247);
+            this.ALetter.Size = new System.Drawing.Size(396, 380);
             this.ALetter.TabIndex = 7;
             this.ALetter.Text = "A";
             this.ALetter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -271,10 +256,9 @@ namespace QuizApplicatie
             this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
             this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BackBtn.Location = new System.Drawing.Point(79, 66);
-            this.BackBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.BackBtn.Location = new System.Drawing.Point(118, 102);
             this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(41, 41);
+            this.BackBtn.Size = new System.Drawing.Size(62, 63);
             this.BackBtn.TabIndex = 66;
             this.BackBtn.TabStop = false;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
@@ -303,24 +287,24 @@ namespace QuizApplicatie
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar.BackColor = System.Drawing.Color.Yellow;
             this.progressBar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.progressBar.Location = new System.Drawing.Point(57, 137);
+            this.progressBar.Location = new System.Drawing.Point(86, 211);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(1846, 10);
+            this.progressBar.Size = new System.Drawing.Size(2769, 15);
             this.progressBar.TabIndex = 13;
             // 
             // VragenScherm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(185)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1946, 1106);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.VraagLable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VragenScherm";
